@@ -15,7 +15,6 @@ export default function Home() {
       <Services />
       <Calculator />
       <Gallery />
-      <Contact />
       <Footer />
     </main>
   );
