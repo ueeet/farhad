@@ -92,7 +92,7 @@ export function Hero() {
           </div>
 
           <div className="lg:col-span-5">
-            <div className="hero-photo relative w-full aspect-[4/5] lg:aspect-auto lg:h-full lg:min-h-[480px] rounded-3xl overflow-hidden placeholder-card gold-glow float-anim">
+            <div className="hero-photo relative w-full aspect-[4/5] lg:aspect-auto lg:h-full lg:min-h-[560px] rounded-3xl overflow-hidden placeholder-card gold-glow float-anim">
               <div className="absolute inset-0 flex items-center justify-center text-text-muted text-xs uppercase tracking-widest">
                 фото в смокинге
               </div>
