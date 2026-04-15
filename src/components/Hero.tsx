@@ -109,24 +109,6 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 overflow-hidden border-t border-line py-6 mt-20">
-        <div className="hero-marquee flex gap-12 whitespace-nowrap font-display text-2xl lg:text-4xl text-text-muted">
-          {Array.from({ length: 2 }).map((_, i) => (
-            <div key={i} className="flex gap-12">
-              <span>СВАДЬБЫ</span>
-              <span className="text-gold">·</span>
-              <span>КОРПОРАТИВЫ</span>
-              <span className="text-gold">·</span>
-              <span>ТВ-ПРОЕКТЫ</span>
-              <span className="text-gold">·</span>
-              <span>ЮБИЛЕИ</span>
-              <span className="text-gold">·</span>
-              <span>СПЕЦПРОЕКТЫ</span>
-              <span className="text-gold">·</span>
-            </div>
-          ))}
-        </div>
-      </div>
     </section>
   );
 }
