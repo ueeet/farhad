@@ -37,22 +37,22 @@ export function Hero() {
     <section
       ref={root}
       id="top"
-      className="relative min-h-[100svh] pt-24 lg:pt-28 pb-24 overflow-hidden bg-noise"
+      className="relative min-h-[100svh] flex flex-col justify-center pt-24 lg:pt-28 pb-16 overflow-hidden bg-noise"
     >
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-1/4 -left-32 w-[600px] h-[600px] rounded-full bg-gold/10 blur-[120px]" />
         <div className="absolute bottom-0 -right-32 w-[500px] h-[500px] rounded-full bg-gold-deep/15 blur-[140px]" />
       </div>
 
-      <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
-        <div className="hero-eyebrow flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-text-muted mb-8">
+      <div className="mx-auto w-full max-w-[1400px] px-6 lg:px-12">
+        <div className="hero-eyebrow flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-text-muted mb-10">
           <span className="w-8 h-px bg-gold" />
           Ведущий · Казань · Набережные Челны
         </div>
 
         <div className="grid lg:grid-cols-12 gap-10 items-stretch">
           <div className="lg:col-span-7">
-            <h1 className="font-display font-black leading-[0.9] tracking-[-0.05em] text-[clamp(2.5rem,7vw,7.5rem)]">
+            <h1 className="font-display font-black leading-[0.9] tracking-[-0.05em] text-[clamp(3rem,9vw,10rem)]">
               <span className="hero-title-line block">ФАРХАД</span>
               <span className="hero-title-line block text-gradient-gold italic" style={{ fontFamily: "var(--font-unbounded)" }}>
                 ИВАНОВ
