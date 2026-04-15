@@ -51,8 +51,8 @@ export function Hero() {
         </div>
 
         <div className="grid lg:grid-cols-12 gap-10 items-stretch">
-          <div className="lg:col-span-7">
-            <h1 className="font-display font-black leading-[0.9] tracking-[-0.05em] text-[clamp(3rem,9vw,10rem)]">
+          <div className="lg:col-span-7 min-w-0">
+            <h1 className="font-display font-black leading-[0.9] tracking-[-0.06em] text-[clamp(2.25rem,6vw,6.5rem)]">
               <span className="hero-title-line block">ФАРХАД</span>
               <span className="hero-title-line block text-gradient-gold italic" style={{ fontFamily: "var(--font-unbounded)" }}>
                 ИВАНОВ
