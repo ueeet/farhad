@@ -33,7 +33,7 @@ export function Footer() {
           </div>
 
           <div className="text-xs text-text-muted">
-            © {new Date().getFullYear()} Farhad Ivanov
+            © {new Date().getFullYear()} Фархад Иванов
           </div>
         </div>
       </div>
