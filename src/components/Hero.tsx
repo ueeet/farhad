@@ -97,12 +97,12 @@ export function Hero() {
                 фото в смокинге
               </div>
               <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
-                <span className="text-[10px] uppercase tracking-widest text-text-muted">portrait · 2026</span>
-                <span className="text-[10px] uppercase tracking-widest text-gold">FI / 01</span>
+                <span className="text-[10px] uppercase tracking-widest text-text-muted">портрет · 2026</span>
+                <span className="text-[10px] uppercase tracking-widest text-gold">ФИ / 01</span>
               </div>
               <div className="absolute bottom-4 left-4 right-4">
-                <div className="text-xs text-text-muted">Premium events</div>
-                <div className="font-display text-xl mt-1">Host & Speaker</div>
+                <div className="text-xs text-text-muted">Премиум-вечера</div>
+                <div className="font-display text-xl mt-1">Ведущий и спикер</div>
               </div>
             </div>
           </div>
