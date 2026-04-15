@@ -30,7 +30,7 @@ export function Nav() {
     >
       <div className="mx-auto max-w-[1400px] px-6 lg:px-12 h-16 lg:h-20 flex items-center justify-between">
         <a href="#top" className="font-display font-bold text-lg tracking-tight">
-          F<span className="text-gold">.</span>I
+          Ф<span className="text-gold">.</span>И
         </a>
 
         <nav className="hidden lg:flex items-center gap-8">
