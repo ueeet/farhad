@@ -29,12 +29,6 @@ export function Hero() {
           "-=0.8"
         );
 
-      gsap.to(".hero-marquee", {
-        xPercent: -50,
-        ease: "none",
-        duration: 30,
-        repeat: -1,
-      });
     },
     { scope: root }
   );
