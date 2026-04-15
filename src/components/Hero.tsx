@@ -50,9 +50,9 @@ export function Hero() {
           Ведущий · Казань · Набережные Челны
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-9">
-            <h1 className="font-display font-black leading-[0.9] tracking-[-0.05em] text-[clamp(2.5rem,8.5vw,9rem)]">
+        <div className="grid lg:grid-cols-12 gap-10 items-stretch">
+          <div className="lg:col-span-7">
+            <h1 className="font-display font-black leading-[0.9] tracking-[-0.05em] text-[clamp(2.5rem,7vw,7.5rem)]">
               <span className="hero-title-line block">ФАРХАД</span>
               <span className="hero-title-line block text-gradient-gold italic" style={{ fontFamily: "var(--font-unbounded)" }}>
                 ИВАНОВ
