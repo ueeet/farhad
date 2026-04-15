@@ -4,7 +4,7 @@ export function Footer() {
       <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
           <div className="font-display font-bold text-lg">
-            FARHAD<span className="text-gold">.</span>IVANOV
+            ФАРХАД<span className="text-gold">.</span>ИВАНОВ
           </div>
 
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-text-muted">
