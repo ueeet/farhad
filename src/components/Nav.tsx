@@ -7,7 +7,6 @@ const links = [
   { href: "#services", label: "Услуги" },
   { href: "#calc", label: "Калькулятор" },
   { href: "#gallery", label: "Работы" },
-  { href: "#contact", label: "Контакты" },
 ];
 
 export function Nav() {
