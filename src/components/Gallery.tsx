@@ -60,7 +60,7 @@ export function Gallery() {
             rel="noopener noreferrer"
             className="text-sm text-text-muted hover:text-gold transition-colors inline-flex items-center gap-2"
           >
-            Смотреть всё в Instagram
+            Смотреть всё в Инстаграме
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
               <path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" strokeWidth="1.5"/>
             </svg>
