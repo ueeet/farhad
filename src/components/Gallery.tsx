@@ -8,14 +8,14 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 const items = [
-  { tag: "Wedding", title: "Камерная свадьба", h: "tall" },
-  { tag: "TV", title: "Прямой эфир", h: "short" },
-  { tag: "Corporate", title: "Премия года", h: "tall" },
-  { tag: "Show", title: "Кама Лемпт", h: "short" },
-  { tag: "Wedding", title: "Hill Resort", h: "tall" },
-  { tag: "Corporate", title: "Открытие сезона", h: "short" },
-  { tag: "TV", title: "Школа Первого канала", h: "short" },
-  { tag: "Special", title: "Прожарка", h: "tall" },
+  { tag: "Свадьба", title: "Камерная свадьба", h: "tall" },
+  { tag: "ТВ", title: "Прямой эфир", h: "short" },
+  { tag: "Корпоратив", title: "Премия года", h: "tall" },
+  { tag: "Шоу", title: "Кама Лемпт", h: "short" },
+  { tag: "Свадьба", title: "Хилл Резорт", h: "tall" },
+  { tag: "Корпоратив", title: "Открытие сезона", h: "short" },
+  { tag: "ТВ", title: "Школа Первого канала", h: "short" },
+  { tag: "Спецпроект", title: "Прожарка", h: "tall" },
 ];
 
 export function Gallery() {
