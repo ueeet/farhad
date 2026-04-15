@@ -72,10 +72,10 @@ export function Hero() {
               <span>Школа Первого канала</span>
             </div>
 
-            <div className="hero-cta mt-12 flex flex-wrap gap-4">
+            <div className="hero-cta mt-12 flex flex-wrap items-center gap-4">
               <a
                 href="#calc"
-                className="btn-gold px-7 py-4 rounded-full text-sm inline-flex items-center gap-2"
+                className="btn-gold h-14 px-7 rounded-full text-sm inline-flex items-center gap-2 leading-none"
               >
                 Рассчитать стоимость
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
@@ -84,7 +84,7 @@ export function Hero() {
               </a>
               <a
                 href="#gallery"
-                className="btn-ghost px-7 py-4 rounded-full text-sm inline-flex items-center gap-2"
+                className="btn-ghost h-14 px-7 rounded-full text-sm inline-flex items-center gap-2 leading-none"
               >
                 Посмотреть шоурил
               </a>
