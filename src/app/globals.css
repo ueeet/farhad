@@ -321,8 +321,9 @@ input[type="range"]::-moz-range-thumb {
 
 .hero-bg-gradient {
   background:
-    radial-gradient(ellipse 60% 50% at 50% 45%, rgba(255,255,255,0.06), transparent 70%),
-    radial-gradient(ellipse at bottom, rgba(255,255,255,0.02), transparent 70%),
+    radial-gradient(ellipse 45% 40% at 50% 42%, rgba(200, 130, 70, 0.12), transparent 70%),
+    radial-gradient(ellipse 70% 60% at 50% 50%, rgba(255,255,255,0.04), transparent 70%),
+    radial-gradient(ellipse at bottom, rgba(60, 30, 15, 0.18), transparent 70%),
     #0a0a0a;
 }
 
