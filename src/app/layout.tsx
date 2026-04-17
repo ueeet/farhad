@@ -36,7 +36,12 @@ export default function RootLayout({
       lang="ru"
       className={`${inter.variable} ${unbounded.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <a href="#top" className="skip-link">
+          Перейти к содержимому
+        </a>
+        {children}
+      </body>
     </html>
   );
 }
