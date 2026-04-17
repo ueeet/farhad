@@ -55,12 +55,23 @@ export function Hero() {
 
       const px = gsap.quickTo(person, "x", { duration: 1.1, ease: "expo.out" });
       const bx = gsap.quickTo(bg, "x", { duration: 1.4, ease: "expo.out" });
+      const fx = gsap.quickTo(farhad, "x", { duration: 1.2, ease: "expo.out" });
+      const fy = gsap.quickTo(farhad, "y", { duration: 1.2, ease: "expo.out" });
+      const ix = gsap.quickTo(ivanov, "x", { duration: 1.2, ease: "expo.out" });
+      const iy = gsap.quickTo(ivanov, "y", { duration: 1.2, ease: "expo.out" });
 
       const onMouseMove = (e: MouseEvent) => {
         const vw = window.innerWidth;
-        const dx = (e.clientX / vw - 0.5) * 18;
-        px(dx);
-        bx(dx * -0.4);
+        const vh = window.innerHeight;
+        const rx = e.clientX / vw - 0.5;
+        const ry = e.clientY / vh - 0.5;
+
+        px(rx * 18);
+        bx(rx * -7);
+        fx(rx * -14);
+        fy(ry * -8);
+        ix(rx * 16);
+        iy(ry * 9);
       };
       window.addEventListener("mousemove", onMouseMove);
       return () => window.removeEventListener("mousemove", onMouseMove);
