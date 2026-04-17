@@ -10,7 +10,6 @@ gsap.registerPlugin(ScrollTrigger);
 export function Hero() {
   const root = useRef<HTMLElement>(null);
   const photoRef = useRef<HTMLDivElement>(null);
-  const ghostRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
     () => {
@@ -18,18 +17,16 @@ export function Hero() {
 
       tl.from(".hero-meta-top > *", { y: 20, opacity: 0, duration: 0.9, stagger: 0.08 })
         .from(".hero-side > *", { y: 20, opacity: 0, duration: 0.9, stagger: 0.1 }, "-=0.6")
-        .from(".hero-title-line", { yPercent: 110, duration: 1.3, stagger: 0.14 }, "-=0.7")
-        .from(".hero-photo-wrap", { scale: 1.12, opacity: 0, duration: 1.6 }, 0.2)
-        .from(".hero-ghost-wrap", { opacity: 0, xPercent: -10, duration: 1.6 }, 0.3)
+        .from(".hero-title-farhad", { yPercent: -110, duration: 1.3 }, "-=0.7")
+        .from(".hero-photo-wrap", { scale: 1.12, opacity: 0, duration: 1.6 }, "-=1.0")
+        .from(".hero-title-ivanov", { yPercent: 110, duration: 1.3 }, "-=1.2")
         .from(".hero-bottom > *", { y: 24, opacity: 0, duration: 0.8, stagger: 0.08 }, "-=0.9");
 
       const photo = photoRef.current;
-      const ghost = ghostRef.current;
-      if (!photo || !ghost) return;
+      if (!photo) return;
 
       gsap.to(photo, {
-        rotation: -3,
-        y: 60,
+        y: 40,
         ease: "none",
         scrollTrigger: {
           trigger: root.current,
@@ -39,33 +36,16 @@ export function Hero() {
         },
       });
 
-      gsap.to(ghost, {
-        rotation: 4,
-        y: 110,
-        xPercent: -6,
-        ease: "none",
-        scrollTrigger: {
-          trigger: root.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: 1.2,
-        },
-      });
-
       const qx = gsap.quickTo(photo, "x", { duration: 1.1, ease: "expo.out" });
       const qy = gsap.quickTo(photo, "y", { duration: 1.1, ease: "expo.out" });
-      const gx = gsap.quickTo(ghost, "x", { duration: 1.4, ease: "expo.out" });
-      const gy = gsap.quickTo(ghost, "y", { duration: 1.4, ease: "expo.out" });
 
       const onMouseMove = (e: MouseEvent) => {
         const vw = window.innerWidth;
         const vh = window.innerHeight;
-        const dx = (e.clientX / vw - 0.5) * 30;
-        const dy = (e.clientY / vh - 0.5) * 20;
+        const dx = (e.clientX / vw - 0.5) * 20;
+        const dy = (e.clientY / vh - 0.5) * 14;
         qx(dx);
         qy(dy);
-        gx(dx * -1.8);
-        gy(dy * -1.4);
       };
       window.addEventListener("mousemove", onMouseMove);
       return () => window.removeEventListener("mousemove", onMouseMove);
