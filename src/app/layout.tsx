@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Unbounded } from "next/font/google";
+import { Inter, Oddval } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -8,10 +8,9 @@ const inter = Inter({
   display: "swap",
 });
 
-const unbounded = Unbounded({
-  variable: "--font-unbounded",
+const oddval = Oddval({
+  variable: "--font-display",
   subsets: ["latin", "cyrillic"],
-  weight: ["400", "600", "700", "800", "900"],
   display: "swap",
 });
 
