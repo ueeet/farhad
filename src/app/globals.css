@@ -249,48 +249,33 @@ input[type="range"]::-moz-range-thumb {
   border: 1px solid var(--line);
 }
 
-.photo-frame {
-  position: relative;
-  filter: contrast(1.06) saturate(1.05);
-  transform-origin: center;
-  will-change: transform;
-  box-shadow:
-    0 40px 80px -30px rgba(0, 0, 0, 0.85),
-    0 10px 40px -10px rgba(120, 70, 30, 0.15);
-}
-
-.photo-frame::before {
-  content: "";
+.hero-photo-bleed {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse at center, transparent 45%, rgba(0,0,0,0.6) 100%);
-  mix-blend-mode: multiply;
-  pointer-events: none;
-  z-index: 3;
-}
-
-.photo-frame::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 4;
-  background:
-    linear-gradient(180deg, rgba(10,10,10,0.35) 0%, transparent 20%, transparent 78%, rgba(10,10,10,0.45) 100%);
-}
-
-.photo-ghost {
-  position: absolute;
-  inset: 0;
-  filter: blur(6px) saturate(1.1) brightness(0.75);
-  opacity: 0.35;
-  transform: translate3d(14%, 4%, 0) scale(1.02);
+  filter: contrast(1.05) saturate(1.08);
   transform-origin: center;
   will-change: transform;
   pointer-events: none;
-  border-radius: 2px;
-  overflow: hidden;
+}
+
+.hero-photo-bleed img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  mask-image:
+    radial-gradient(ellipse 62% 75% at 52% 52%, #000 20%, rgba(0,0,0,0.9) 45%, rgba(0,0,0,0.4) 72%, transparent 98%);
+  -webkit-mask-image:
+    radial-gradient(ellipse 62% 75% at 52% 52%, #000 20%, rgba(0,0,0,0.9) 45%, rgba(0,0,0,0.4) 72%, transparent 98%);
+}
+
+.hero-photo-bleed::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(10,10,10,0.55) 0%, transparent 18%, transparent 70%, rgba(10,10,10,0.9) 100%);
 }
 
 .hero-photo-glow {
