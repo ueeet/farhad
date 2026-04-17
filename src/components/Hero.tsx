@@ -98,12 +98,12 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative z-[10] mx-auto w-full max-w-[1600px] px-6 lg:px-12 hero-meta-top flex items-center justify-between gap-6">
-        <div className="flex items-center gap-4 font-display font-black uppercase tracking-[-0.02em] text-text text-[clamp(1rem,1.9vw,1.75rem)] leading-none">
-          <span className="hidden sm:block w-10 lg:w-16 h-px bg-text-muted" />
+      <div className="relative z-[10] mx-auto w-full max-w-[1600px] px-6 lg:px-12 hero-meta-top flex items-start justify-between gap-6 text-[11px] uppercase tracking-[0.3em] text-text-muted">
+        <div className="flex items-center gap-3">
+          <span className="w-8 h-px bg-text-muted" />
           Ведущий мероприятий
         </div>
-        <div className="text-right text-[11px] uppercase tracking-[0.3em] text-text-muted">
+        <div className="text-right">
           Казань<span className="hidden sm:inline"> · </span>
           <br className="sm:hidden" />
           Набережные Челны
