@@ -142,7 +142,7 @@ export function Calculator() {
         <div className="flex items-end justify-between flex-wrap gap-6 mb-16 calc-anim">
           <div>
             <div className="text-xs uppercase tracking-[0.3em] text-gold mb-6">
-              / 03 — Калькулятор
+              / Смета
             </div>
             <h2 className="font-display font-black text-5xl lg:text-8xl leading-[0.9] tracking-[-0.04em] balance max-w-3xl">
               Сколько стоит <span className="text-gradient-gold italic">ваш вечер</span>
