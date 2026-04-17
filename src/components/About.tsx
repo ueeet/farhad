@@ -109,7 +109,7 @@ export function About() {
               key={s.label}
               className="stat-block bg-bg p-8 lg:p-10 group hover:bg-bg-soft transition-colors"
             >
-              <div className="font-display font-black text-4xl lg:text-6xl text-gradient-gold">
+              <div className="font-display font-black text-4xl lg:text-6xl text-gradient-gold tabular">
                 {s.value}
               </div>
               <div className="mt-4 text-xs lg:text-sm text-text-muted uppercase tracking-wider">
