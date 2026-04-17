@@ -317,7 +317,7 @@ button:active, a:active {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: radial-gradient(400px circle at var(--mx, 50%) var(--my, 50%), rgba(212, 168, 87, 0.6), transparent 40%);
+  background: radial-gradient(400px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.7), transparent 40%);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
           mask-composite: exclude;
