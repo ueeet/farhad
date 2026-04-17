@@ -33,8 +33,8 @@ const cities = [
 const durations = [
   { id: "short", label: "До 3 ч", mult: 0.7 },
   { id: "mid", label: "4–5 ч", mult: 1.0 },
-  { id: "long", label: "6–8 ч", mult: 1.4 },
-  { id: "all", label: "Весь день", mult: 1.8 },
+  { id: "long", label: "6–8 ч", mult: 1.5 },
+  { id: "all", label: "Весь день", mult: 1.9 },
 ];
 
 const days = [
