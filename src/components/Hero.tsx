@@ -71,8 +71,8 @@ export function Hero() {
       className="relative min-h-[100dvh] flex flex-col justify-between pt-24 lg:pt-28 pb-10 overflow-hidden hero-bg-gradient bg-noise isolate"
     >
       <div
-        ref={photoRef}
-        className="hero-photo-wrap hero-photo-bleed"
+        ref={bgRef}
+        className="hero-bg-photo"
         aria-hidden
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
