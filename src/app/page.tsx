@@ -1,9 +1,12 @@
 import { Nav } from "@/components/Nav";
 import { Hero } from "@/components/Hero";
-import { About } from "@/components/About";
 import { Services } from "@/components/Services";
-import { Calculator } from "@/components/Calculator";
+import { Showreel } from "@/components/Showreel";
 import { Gallery } from "@/components/Gallery";
+import { Testimonials } from "@/components/Testimonials";
+import { About } from "@/components/About";
+import { Calculator } from "@/components/Calculator";
+import { Faq } from "@/components/Faq";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -11,10 +14,13 @@ export default function Home() {
     <main className="relative bg-bg text-text">
       <Nav />
       <Hero />
-      <About />
       <Services />
-      <Calculator />
+      <Showreel />
       <Gallery />
+      <Testimonials />
+      <About />
+      <Calculator />
+      <Faq />
       <Footer />
     </main>
   );
