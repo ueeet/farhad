@@ -38,19 +38,6 @@ export function About() {
         ease: "power3.out",
       });
 
-      gsap.utils.toArray<HTMLElement>(".about-fill").forEach((el) => {
-        gsap.to(el, {
-          backgroundPositionX: "0%",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 85%",
-            end: "top 45%",
-            scrub: 0.8,
-          },
-          ease: "none",
-        });
-      });
-
       gsap.from(".stat-block", {
         scrollTrigger: {
           trigger: ".stats-grid",
