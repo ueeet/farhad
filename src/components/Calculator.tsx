@@ -274,8 +274,6 @@ export function Calculator() {
                 Аванс — 30%.
               </p>
 
-              <div className="my-6 divider" />
-
               <div className="space-y-2 text-sm">
                 <Row k="Формат" v={eventType.label} />
                 <Row k="Гостей" v={String(guests)} />
