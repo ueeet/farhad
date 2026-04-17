@@ -61,7 +61,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--gold-deep);
+  background: #555;
 }
 
 .font-display {
