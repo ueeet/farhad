@@ -3,9 +3,12 @@
 import { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import { useSpotlight } from "./Spotlight";
 
 export function Hero() {
   const root = useRef<HTMLElement>(null);
+  const photoRef = useRef<HTMLDivElement>(null);
+  const onMove = useSpotlight();
 
   useGSAP(
     () => {
@@ -14,7 +17,7 @@ export function Hero() {
       tl.from(".hero-eyebrow", { y: 20, opacity: 0, duration: 0.8 })
         .from(
           ".hero-title-line",
-          { y: 80, opacity: 0, duration: 1, stagger: 0.12 },
+          { yPercent: 110, duration: 1.1, stagger: 0.14, ease: "expo.out" },
           "-=0.5"
         )
         .from(
@@ -22,13 +25,42 @@ export function Hero() {
           { y: 20, opacity: 0, duration: 0.6, stagger: 0.08 },
           "-=0.7"
         )
-        .from(".hero-photo", { scale: 1.1, opacity: 0, duration: 1.2 }, 0)
+        .from(".hero-photo", { scale: 1.08, opacity: 0, duration: 1.4, ease: "expo.out" }, 0)
         .from(
           ".hero-cta > *",
           { y: 20, opacity: 0, duration: 0.6, stagger: 0.1 },
           "-=0.8"
         );
 
+      const photo = photoRef.current;
+      if (!photo) return;
+
+      const qx = gsap.quickTo(photo, "x", { duration: 0.9, ease: "expo.out" });
+      const qy = gsap.quickTo(photo, "y", { duration: 0.9, ease: "expo.out" });
+      const qrx = gsap.quickTo(photo, "rotateY", { duration: 0.9, ease: "expo.out" });
+      const qry = gsap.quickTo(photo, "rotateX", { duration: 0.9, ease: "expo.out" });
+
+      const onMouseMove = (e: MouseEvent) => {
+        const rect = photo.getBoundingClientRect();
+        const cx = rect.left + rect.width / 2;
+        const cy = rect.top + rect.height / 2;
+        const dx = (e.clientX - cx) / rect.width;
+        const dy = (e.clientY - cy) / rect.height;
+        qx(dx * 18);
+        qy(dy * 18);
+        qrx(dx * 6);
+        qry(-dy * 6);
+      };
+      const onLeave = () => {
+        qx(0); qy(0); qrx(0); qry(0);
+      };
+      const parent = photo.parentElement;
+      parent?.addEventListener("mousemove", onMouseMove);
+      parent?.addEventListener("mouseleave", onLeave);
+      return () => {
+        parent?.removeEventListener("mousemove", onMouseMove);
+        parent?.removeEventListener("mouseleave", onLeave);
+      };
     },
     { scope: root }
   );
@@ -37,7 +69,7 @@ export function Hero() {
     <section
       ref={root}
       id="top"
-      className="relative min-h-[100svh] flex flex-col justify-center pt-24 lg:pt-28 pb-16 overflow-hidden bg-noise"
+      className="relative min-h-[100dvh] flex flex-col justify-center pt-24 lg:pt-28 pb-16 overflow-hidden bg-noise"
     >
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-1/4 -left-32 w-[600px] h-[600px] rounded-full bg-gold/10 blur-[120px]" />
@@ -52,10 +84,14 @@ export function Hero() {
 
         <div className="grid lg:grid-cols-12 gap-10 items-stretch">
           <div className="lg:col-span-7 min-w-0">
-            <h1 className="font-display font-black leading-[0.9] tracking-[-0.06em] text-[clamp(2.25rem,6vw,6.5rem)]">
-              <span className="hero-title-line block">ФАРХАД</span>
-              <span className="hero-title-line block text-gradient-gold italic" style={{ fontFamily: "var(--font-unbounded)" }}>
-                ИВАНОВ
+            <h1 className="font-display font-black leading-[0.9] tracking-[-0.06em] text-[clamp(2.25rem,6vw,6.5rem)] balance">
+              <span className="block overflow-hidden">
+                <span className="hero-title-line block">ФАРХАД</span>
+              </span>
+              <span className="block overflow-hidden">
+                <span className="hero-title-line block text-gradient-gold italic" style={{ fontFamily: "var(--font-unbounded)" }}>
+                  ИВАНОВ
+                </span>
               </span>
             </h1>
 
@@ -65,9 +101,9 @@ export function Hero() {
                 Открыт к новым датам
               </span>
               <span className="opacity-40">·</span>
-              <span>5+ лет на сцене</span>
+              <span className="tabular">5+ лет на сцене</span>
               <span className="opacity-40">·</span>
-              <span>500+ мероприятий</span>
+              <span className="tabular">500+ мероприятий</span>
               <span className="opacity-40">·</span>
               <span>Школа Первого канала</span>
             </div>
@@ -88,21 +124,41 @@ export function Hero() {
               >
                 Посмотреть шоурил
               </a>
+              <a
+                href="https://www.instagram.com/farhad_ivanov/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-text-muted hover:text-gold transition-colors ml-2 inline-flex items-center gap-2"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.5"/>
+                  <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.5"/>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+                </svg>
+                @farhad_ivanov
+              </a>
             </div>
           </div>
 
-          <div className="lg:col-span-5">
-            <div className="hero-photo relative w-full aspect-[4/5] lg:aspect-auto lg:h-full lg:min-h-[560px] rounded-3xl overflow-hidden placeholder-card gold-glow float-anim">
-              <div className="absolute inset-0 flex items-center justify-center text-text-muted text-xs uppercase tracking-widest">
+          <div
+            className="lg:col-span-5 [perspective:1200px]"
+            onMouseMove={onMove}
+          >
+            <div
+              ref={photoRef}
+              className="hero-photo spotlight relative w-full aspect-[4/5] lg:aspect-auto lg:h-full lg:min-h-[560px] rounded-3xl overflow-hidden placeholder-card gold-glow will-change-transform"
+              style={{ transformStyle: "preserve-3d" }}
+            >
+              <div className="absolute inset-0 flex items-center justify-center text-text-muted text-xs uppercase tracking-widest z-[2]">
                 фото в смокинге
               </div>
-              <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
+              <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-[2]">
                 <span className="text-[10px] uppercase tracking-widest text-text-muted">портрет · 2026</span>
                 <span className="text-[10px] uppercase tracking-widest text-gold">ФИ / 01</span>
               </div>
-              <div className="absolute bottom-4 left-4 right-4">
+              <div className="absolute bottom-4 left-4 right-4 z-[2]">
                 <div className="text-xs text-text-muted">Премиум-вечера</div>
-                <div className="font-display text-xl mt-1">Ведущий и спикер</div>
+                <div className="font-display text-xl mt-1 balance">Ведущий и спикер</div>
               </div>
             </div>
           </div>
