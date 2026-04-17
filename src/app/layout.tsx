@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html
       lang="ru"
-      className={`${inter.variable} ${unbounded.variable}`}
+      className={`${inter.variable} ${oddval.variable}`}
     >
       <body>
         <a href="#top" className="skip-link">
