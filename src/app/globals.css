@@ -251,9 +251,12 @@ input[type="range"]::-moz-range-thumb {
 
 .photo-frame {
   position: relative;
-  filter: grayscale(1) contrast(1.05);
+  filter: contrast(1.06) saturate(1.05);
   transform-origin: center;
   will-change: transform;
+  box-shadow:
+    0 40px 80px -30px rgba(0, 0, 0, 0.85),
+    0 10px 40px -10px rgba(120, 70, 30, 0.15);
 }
 
 .photo-frame::before {
@@ -261,10 +264,50 @@ input[type="range"]::-moz-range-thumb {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.55) 100%);
+    radial-gradient(ellipse at center, transparent 45%, rgba(0,0,0,0.6) 100%);
   mix-blend-mode: multiply;
   pointer-events: none;
   z-index: 3;
+}
+
+.photo-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 4;
+  background:
+    linear-gradient(180deg, rgba(10,10,10,0.35) 0%, transparent 20%, transparent 78%, rgba(10,10,10,0.45) 100%);
+}
+
+.photo-ghost {
+  position: absolute;
+  inset: 0;
+  filter: blur(14px) saturate(1.15) brightness(0.85);
+  opacity: 0.55;
+  mix-blend-mode: screen;
+  transform-origin: center;
+  will-change: transform;
+  pointer-events: none;
+}
+
+.photo-ghost img {
+  transform: scale(1.08);
+}
+
+.hero-photo-glow {
+  position: absolute;
+  inset: -30% -20%;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 55% 60% at 50% 45%, rgba(180, 110, 55, 0.28), transparent 70%);
+  filter: blur(30px);
+}
+
+.hero-mark {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.3em;
 }
 
 @keyframes breath {
