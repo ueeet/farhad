@@ -3,13 +3,13 @@
 import { useEffect, useState } from "react";
 
 const leftLinks = [
-  { href: "#about", label: "01 / Обо мне" },
-  { href: "#services", label: "02 / Услуги" },
+  { href: "#about", label: "Обо мне" },
+  { href: "#services", label: "Услуги" },
 ];
 
 const rightLinks = [
-  { href: "#calc", label: "03 / Смета" },
-  { href: "#gallery", label: "04 / Работы" },
+  { href: "#calc", label: "Смета" },
+  { href: "#gallery", label: "Работы" },
 ];
 
 export function Nav() {
