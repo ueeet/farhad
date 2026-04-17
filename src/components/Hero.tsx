@@ -100,39 +100,37 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="relative z-[10] mx-auto w-full max-w-[1600px] px-6 lg:px-12 flex items-center justify-center">
-        <div className="relative w-full h-[min(82vh,880px)] flex items-center justify-center">
-          <h1 className="sr-only">Фархад Иванов</h1>
+      <h1 className="sr-only">Фархад Иванов</h1>
 
-          <div
-            aria-hidden
-            className="absolute inset-x-0 top-[2%] lg:top-[4%] z-[1] overflow-hidden pointer-events-none"
-          >
-            <span ref={farhadRef} className="hero-title-farhad block font-display font-black leading-[0.82] tracking-[-0.05em] text-text text-[clamp(4rem,15vw,17rem)] text-left pl-[2%] pr-[2%]">
-              ФАРХАД
-            </span>
-          </div>
-
-          <div ref={personRef} className="hero-person z-[2]" aria-hidden>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/hero-person.png"
-              alt=""
-              loading="eager"
-              draggable={false}
-            />
-          </div>
-
-          <div
-            aria-hidden
-            className="absolute inset-x-0 bottom-[2%] lg:bottom-[4%] z-[3] overflow-hidden pointer-events-none"
-          >
-            <span ref={ivanovRef} className="hero-title-ivanov block font-display font-black italic leading-[0.82] tracking-[-0.05em] text-text text-[clamp(4rem,15vw,17rem)] text-right pr-[2%] pl-[2%]">
-              иванов
-            </span>
-          </div>
-        </div>
+      <div
+        aria-hidden
+        className="absolute inset-x-0 top-[13%] lg:top-[14%] z-[1] overflow-hidden pointer-events-none"
+      >
+        <span ref={farhadRef} className="hero-title-farhad block font-display font-black leading-[0.82] tracking-[-0.05em] text-text text-[clamp(4rem,15vw,17rem)] text-left pl-[0.5%]">
+          ФАРХАД
+        </span>
       </div>
+
+      <div ref={personRef} className="hero-person z-[2]" aria-hidden>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/hero-person.png"
+          alt=""
+          loading="eager"
+          draggable={false}
+        />
+      </div>
+
+      <div
+        aria-hidden
+        className="absolute inset-x-0 bottom-[22%] lg:bottom-[20%] z-[3] overflow-hidden pointer-events-none"
+      >
+        <span ref={ivanovRef} className="hero-title-ivanov block font-display font-black italic leading-[0.82] tracking-[-0.05em] text-text text-[clamp(4rem,15vw,17rem)] text-right pr-[0.5%]">
+          иванов
+        </span>
+      </div>
+
+      <div className="relative z-[10] mx-auto w-full max-w-[1600px] px-6 lg:px-12 flex items-center justify-center flex-1" />
 
       <div className="relative z-[10] mx-auto w-full max-w-[1600px] px-6 lg:px-12 hero-bottom flex flex-col lg:flex-row lg:items-end justify-between gap-8">
         <div className="flex flex-wrap items-center gap-3">
