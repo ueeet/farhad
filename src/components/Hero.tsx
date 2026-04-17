@@ -109,7 +109,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="mx-auto w-full max-w-[1600px] px-6 lg:px-12 hero-bottom flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+      <div className="relative z-[10] mx-auto w-full max-w-[1600px] px-6 lg:px-12 hero-bottom flex flex-col lg:flex-row lg:items-end justify-between gap-8">
         <div className="flex flex-wrap items-center gap-3">
           <a href="#calc" className="btn-arrow">
             <span className="btn-arrow-label">Рассчитать вечер</span>
