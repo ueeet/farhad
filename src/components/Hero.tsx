@@ -108,7 +108,7 @@ export function Hero() {
             aria-hidden
             className="absolute inset-x-0 top-[2%] lg:top-[4%] z-[1] overflow-hidden pointer-events-none"
           >
-            <span className="hero-title-farhad block font-display font-black leading-[0.82] tracking-[-0.05em] text-text text-[clamp(4rem,15vw,17rem)] text-left pl-[2%] pr-[2%]">
+            <span ref={farhadRef} className="hero-title-farhad block font-display font-black leading-[0.82] tracking-[-0.05em] text-text text-[clamp(4rem,15vw,17rem)] text-left pl-[2%] pr-[2%]">
               ФАРХАД
             </span>
           </div>
