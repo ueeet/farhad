@@ -283,16 +283,14 @@ input[type="range"]::-moz-range-thumb {
 .photo-ghost {
   position: absolute;
   inset: 0;
-  filter: blur(14px) saturate(1.15) brightness(0.85);
-  opacity: 0.55;
-  mix-blend-mode: screen;
+  filter: blur(6px) saturate(1.1) brightness(0.75);
+  opacity: 0.35;
+  transform: translate3d(14%, 4%, 0) scale(1.02);
   transform-origin: center;
   will-change: transform;
   pointer-events: none;
-}
-
-.photo-ghost img {
-  transform: scale(1.08);
+  border-radius: 2px;
+  overflow: hidden;
 }
 
 .hero-photo-glow {
