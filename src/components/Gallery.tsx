@@ -48,7 +48,7 @@ export function Gallery() {
         <div className="flex items-end justify-between flex-wrap gap-6 mb-16">
           <div>
             <div className="text-xs uppercase tracking-[0.3em] text-gold mb-6">
-              / 04 — Работы
+              / Работы
             </div>
             <h2 className="font-display font-black text-5xl lg:text-8xl leading-[0.9] tracking-[-0.04em] balance">
               <span className="text-gradient-gold italic">Кадры</span> с площадки
