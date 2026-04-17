@@ -141,46 +141,7 @@ export function Hero() {
         </span>
       </div>
 
-      <div className="relative z-[10] mx-auto w-full max-w-[1600px] px-6 lg:px-12 flex items-center justify-center flex-1" />
-
-      <div className="relative z-[10] mx-auto w-full max-w-[1600px] px-6 lg:px-12 hero-bottom flex flex-col lg:flex-row lg:items-end justify-between gap-8">
-        <div className="flex flex-wrap items-center gap-3">
-          <a href="#calc" className="btn-arrow">
-            <span className="btn-arrow-label">Рассчитать вечер</span>
-            <span className="btn-arrow-circle">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                <path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </span>
-          </a>
-          <a href="#gallery" className="btn-outline">
-            Шоурил
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden>
-              <path d="M6 3l14 9-14 9V3z" fill="currentColor"/>
-            </svg>
-          </a>
-        </div>
-
-        <div className="flex flex-wrap items-end gap-x-10 gap-y-3 text-xs text-text-muted uppercase tracking-[0.2em]">
-          <div>
-            <div className="font-display text-2xl lg:text-3xl text-text tabular tracking-tight">500+</div>
-            <div className="mt-1">мероприятий</div>
-          </div>
-          <div>
-            <div className="font-display text-2xl lg:text-3xl text-text tabular tracking-tight">13.7K</div>
-            <div className="mt-1">подписчиков</div>
-          </div>
-          <div className="hidden md:block">
-            <div className="font-display text-2xl lg:text-3xl text-text tracking-tight">Первый</div>
-            <div className="mt-1">канал · Школа</div>
-          </div>
-        </div>
-      </div>
-
-      <div className="absolute z-[10] bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-text-muted">
-        <span>скролл</span>
-        <span className="block w-px h-8 bg-text-muted/40 animate-pulse" />
-      </div>
+      <div className="flex-1" />
     </section>
   );
 }
