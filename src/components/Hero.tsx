@@ -102,16 +102,26 @@ export function Hero() {
 
           <div
             aria-hidden
-            className="absolute inset-x-0 top-[2%] lg:top-[4%] overflow-hidden pointer-events-none"
+            className="absolute inset-x-0 top-[2%] lg:top-[4%] z-[1] overflow-hidden pointer-events-none"
           >
             <span className="hero-title-farhad block font-display font-black leading-[0.82] tracking-[-0.05em] text-text text-[clamp(4rem,15vw,17rem)] text-left pl-[2%] pr-[2%]">
               ФАРХАД
             </span>
           </div>
 
+          <div ref={personRef} className="hero-person z-[2]" aria-hidden>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/hero-person.png"
+              alt=""
+              loading="eager"
+              draggable={false}
+            />
+          </div>
+
           <div
             aria-hidden
-            className="absolute inset-x-0 bottom-[2%] lg:bottom-[4%] overflow-hidden pointer-events-none"
+            className="absolute inset-x-0 bottom-[2%] lg:bottom-[4%] z-[3] overflow-hidden pointer-events-none"
           >
             <span className="hero-title-ivanov block font-display font-black italic leading-[0.82] tracking-[-0.05em] text-text text-[clamp(4rem,15vw,17rem)] text-right pr-[2%] pl-[2%]">
               иванов
