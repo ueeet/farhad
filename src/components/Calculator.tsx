@@ -15,12 +15,12 @@ type EventType = {
 };
 
 const eventTypes: EventType[] = [
-  { id: "wedding", label: "Свадьба", base: 60000, hint: "Под ключ, со сценарием" },
-  { id: "corp", label: "Корпоратив", base: 80000, hint: "С интеграцией бренда" },
-  { id: "birthday", label: "День рождения", base: 40000, hint: "Камерно или с размахом" },
-  { id: "anniversary", label: "Юбилей", base: 50000, hint: "Личная история героя" },
-  { id: "kids", label: "Детский праздник", base: 30000, hint: "С анимацией" },
-  { id: "tv", label: "ТВ / спецпроект", base: 100000, hint: "Эфир, открытие, премия" },
+  { id: "wedding", label: "Свадьба", base: 80000, hint: "Под ключ, со сценарием" },
+  { id: "corp", label: "Корпоратив", base: 95000, hint: "С интеграцией бренда" },
+  { id: "birthday", label: "День рождения", base: 55000, hint: "Камерно или с размахом" },
+  { id: "anniversary", label: "Юбилей", base: 70000, hint: "Личная история героя" },
+  { id: "kids", label: "Детский праздник", base: 40000, hint: "С анимацией" },
+  { id: "tv", label: "ТВ / спецпроект", base: 130000, hint: "Эфир, открытие, премия" },
 ];
 
 const cities = [
