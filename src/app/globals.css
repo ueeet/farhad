@@ -197,18 +197,18 @@ input[type="range"]::-webkit-slider-thumb {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  background: var(--gold-bright);
+  background: #ffffff;
   margin-top: -8px;
-  box-shadow: 0 0 0 4px rgba(212, 168, 87, 0.15), 0 4px 16px rgba(212, 168, 87, 0.3);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.08), 0 4px 16px rgba(255, 255, 255, 0.2);
   transition: box-shadow 0.2s ease;
 }
 
 input[type="range"]::-webkit-slider-thumb:hover {
-  box-shadow: 0 0 0 6px rgba(212, 168, 87, 0.2), 0 4px 20px rgba(212, 168, 87, 0.5);
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.12), 0 4px 20px rgba(255, 255, 255, 0.3);
 }
 
 input[type="range"]::-moz-range-track {
-  background: linear-gradient(90deg, var(--gold) 0%, var(--gold) var(--val, 50%), #1f1f1f var(--val, 50%));
+  background: linear-gradient(90deg, #ffffff 0%, #ffffff var(--val, 50%), #1f1f1f var(--val, 50%));
   height: 4px;
   border-radius: 2px;
 }
@@ -218,8 +218,8 @@ input[type="range"]::-moz-range-thumb {
   width: 20px;
   border: none;
   border-radius: 50%;
-  background: var(--gold-bright);
-  box-shadow: 0 0 0 4px rgba(212, 168, 87, 0.15);
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.08);
 }
 
 @keyframes float {
