@@ -116,59 +116,64 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative w-full">
-          <div className="relative mx-auto w-[clamp(240px,32vw,460px)] aspect-[3/4] idle-breath">
-            <div className="hero-photo-glow" aria-hidden />
-
-            <div
-              ref={ghostRef}
-              className="hero-ghost-wrap photo-ghost will-change-transform"
-              aria-hidden
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/hero.png"
-                alt=""
-                className="absolute inset-0 w-full h-full object-cover"
-                loading="eager"
-                draggable={false}
-              />
-            </div>
-
-            <div
-              ref={photoRef}
-              className="hero-photo-wrap photo-frame absolute inset-0 rounded-sm overflow-hidden placeholder-card will-change-transform"
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/hero.png"
-                alt="Фархад Иванов — ведущий мероприятий"
-                className="absolute inset-0 w-full h-full object-cover z-[1]"
-                loading="eager"
-                draggable={false}
-              />
-              <div className="absolute top-3 left-3 right-3 flex items-center justify-between text-[9px] uppercase tracking-[0.25em] text-text z-[5] mix-blend-difference">
-                <span>ФИ / 01</span>
-                <span className="tabular">01 — 04</span>
-              </div>
-              <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[9px] uppercase tracking-[0.25em] text-text z-[5] mix-blend-difference">
-                <span>Выдержка</span>
-                <span className="tabular">1 / 200</span>
-              </div>
-            </div>
-          </div>
-
+        <div className="relative w-full flex flex-col items-center justify-center">
           <h1
             aria-label="Фархад Иванов"
-            className="pointer-events-none absolute inset-0 flex flex-col justify-center items-center font-display font-black leading-[0.84] tracking-[-0.06em] text-center text-text z-[2]"
+            className="relative font-display font-black leading-[0.82] tracking-[-0.05em] text-center text-text z-[2] w-full"
           >
             <span className="block overflow-hidden w-full">
-              <span className="hero-title-line block text-[clamp(3.5rem,14vw,14rem)]">
+              <span className="hero-title-line block text-[clamp(3rem,10vw,9.5rem)]">
                 ФАРХАД
               </span>
             </span>
+
+            <span className="block overflow-hidden -my-[0.12em]">
+              <span className="hero-title-line block">
+                <span className="relative inline-block align-middle mx-auto w-[clamp(240px,28vw,380px)] aspect-[3/4] idle-breath">
+                  <span className="hero-photo-glow" aria-hidden />
+
+                  <span
+                    ref={ghostRef}
+                    className="hero-ghost-wrap photo-ghost will-change-transform"
+                    aria-hidden
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/images/hero.png"
+                      alt=""
+                      className="absolute inset-0 w-full h-full object-cover"
+                      loading="eager"
+                      draggable={false}
+                    />
+                  </span>
+
+                  <span
+                    ref={photoRef}
+                    className="hero-photo-wrap photo-frame absolute inset-0 rounded-sm overflow-hidden will-change-transform block"
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/images/hero.png"
+                      alt="Фархад Иванов — ведущий мероприятий"
+                      className="absolute inset-0 w-full h-full object-cover z-[1]"
+                      loading="eager"
+                      draggable={false}
+                    />
+                    <span className="absolute top-3 left-3 right-3 flex items-center justify-between text-[9px] uppercase tracking-[0.25em] text-text z-[5] mix-blend-difference">
+                      <span className="font-sans font-normal tracking-[0.25em] not-italic">ФИ / 01</span>
+                      <span className="font-sans font-normal tabular tracking-[0.25em] not-italic">01 — 04</span>
+                    </span>
+                    <span className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[9px] uppercase tracking-[0.25em] text-text z-[5] mix-blend-difference">
+                      <span className="font-sans font-normal tracking-[0.25em] not-italic">Выдержка</span>
+                      <span className="font-sans font-normal tabular tracking-[0.25em] not-italic">1 / 200</span>
+                    </span>
+                  </span>
+                </span>
+              </span>
+            </span>
+
             <span className="block overflow-hidden w-full">
-              <span className="hero-title-line block italic text-[clamp(3.5rem,14vw,14rem)] text-text-muted">
+              <span className="hero-title-line block italic text-[clamp(3rem,10vw,9.5rem)] text-text-muted">
                 иванов
               </span>
             </span>
