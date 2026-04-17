@@ -57,9 +57,23 @@ export function Hero() {
     <section
       ref={root}
       id="top"
-      className="relative min-h-[100dvh] flex flex-col justify-between pt-24 lg:pt-28 pb-10 overflow-hidden hero-bg-gradient bg-noise"
+      className="relative min-h-[100dvh] flex flex-col justify-between pt-24 lg:pt-28 pb-10 overflow-hidden hero-bg-gradient bg-noise isolate"
     >
-      <div className="mx-auto w-full max-w-[1600px] px-6 lg:px-12 hero-meta-top flex items-start justify-between gap-6 text-[11px] uppercase tracking-[0.3em] text-text-muted">
+      <div
+        ref={photoRef}
+        className="hero-photo-wrap hero-photo-bleed"
+        aria-hidden
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/hero.png"
+          alt=""
+          loading="eager"
+          draggable={false}
+        />
+      </div>
+
+      <div className="relative z-[10] mx-auto w-full max-w-[1600px] px-6 lg:px-12 hero-meta-top flex items-start justify-between gap-6 text-[11px] uppercase tracking-[0.3em] text-text-muted">
         <div className="flex items-center gap-3">
           <span className="w-8 h-px bg-text-muted" />
           Ведущий мероприятий
@@ -71,37 +85,13 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="relative mx-auto w-full max-w-[1600px] px-6 lg:px-12 flex items-center justify-center">
-        <div className="pointer-events-none absolute left-6 lg:left-12 top-1/2 -translate-y-1/2 hidden md:flex flex-col gap-8 text-[10px] uppercase text-text-muted hero-side z-[3]">
-          <div className="hero-mark">
-            <div className="text-text/60">N° 01</div>
-            <div className="mt-1 text-text-muted/70">Portrait</div>
-          </div>
-          <div className="w-px h-24 bg-line" />
-          <div className="hero-mark">
-            <div className="text-text/60">2026</div>
-            <div className="mt-1 text-text-muted/70">Cover</div>
-          </div>
-        </div>
-
-        <div className="pointer-events-none absolute right-6 lg:right-12 top-1/2 -translate-y-1/2 hidden md:flex flex-col items-end gap-8 text-[10px] uppercase text-text-muted hero-side z-[3]">
-          <div className="hero-mark text-right">
-            <div className="text-text/60">ISO 400</div>
-            <div className="mt-1 text-text-muted/70">35 mm</div>
-          </div>
-          <div className="w-px h-24 bg-line ml-auto" />
-          <div className="hero-mark text-right">
-            <div className="text-text/60">Host</div>
-            <div className="mt-1 text-text-muted/70">Фархад · Иванов</div>
-          </div>
-        </div>
-
+      <div className="relative z-[10] mx-auto w-full max-w-[1600px] px-6 lg:px-12 flex items-center justify-center">
         <div className="relative w-full h-[min(82vh,880px)] flex items-center justify-center">
           <h1 className="sr-only">Фархад Иванов</h1>
 
           <div
             aria-hidden
-            className="absolute inset-x-0 top-[2%] lg:top-[4%] z-[1] overflow-hidden pointer-events-none"
+            className="absolute inset-x-0 top-[2%] lg:top-[4%] overflow-hidden pointer-events-none"
           >
             <span className="hero-title-farhad block font-display font-black leading-[0.82] tracking-[-0.05em] text-text text-[clamp(4rem,15vw,17rem)] text-left pl-[2%] pr-[2%]">
               ФАРХАД
@@ -109,21 +99,8 @@ export function Hero() {
           </div>
 
           <div
-            ref={photoRef}
-            className="hero-photo-wrap hero-photo-bleed z-[2] w-[min(96vw,1600px)] aspect-[16/9]"
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/hero.png"
-              alt="Фархад Иванов — ведущий мероприятий"
-              loading="eager"
-              draggable={false}
-            />
-          </div>
-
-          <div
             aria-hidden
-            className="absolute inset-x-0 bottom-[2%] lg:bottom-[4%] z-[3] overflow-hidden pointer-events-none"
+            className="absolute inset-x-0 bottom-[2%] lg:bottom-[4%] overflow-hidden pointer-events-none"
           >
             <span className="hero-title-ivanov block font-display font-black italic leading-[0.82] tracking-[-0.05em] text-text text-[clamp(4rem,15vw,17rem)] text-right pr-[2%] pl-[2%]">
               иванов
