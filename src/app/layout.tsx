@@ -1,15 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, Oddval } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
-  subsets: ["latin", "cyrillic"],
-  display: "swap",
-});
-
-const oddval = Oddval({
-  variable: "--font-oddval",
   subsets: ["latin", "cyrillic"],
   display: "swap",
 });
