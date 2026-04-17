@@ -111,7 +111,6 @@ export function Hero() {
           <div
             ref={photoRef}
             className="hero-photo-wrap hero-photo-bleed z-[2] w-[min(96vw,1600px)] aspect-[16/9]"
-            style={{ position: "relative" }}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
