@@ -63,9 +63,6 @@ export function Hero() {
           <span className="w-8 h-px bg-text-muted" />
           Ведущий мероприятий
         </div>
-        <div className="hidden sm:block tabular">
-          55.7963° N · 49.1088° E
-        </div>
         <div className="text-right">
           Казань<span className="hidden sm:inline"> · </span>
           <br className="sm:hidden" />
