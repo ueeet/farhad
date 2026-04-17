@@ -50,16 +50,6 @@ export function About() {
         ease: "power2.out",
       });
 
-      gsap.to(".stat-num", {
-        scrollTrigger: {
-          trigger: ".stats-grid",
-          start: "top 80%",
-        },
-        duration: 1.4,
-        ease: "expo.out",
-        textContent: (i, el) => el.getAttribute("data-to") ?? "",
-        snap: { textContent: 1 },
-      });
     },
     { scope: root }
   );
