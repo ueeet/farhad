@@ -244,9 +244,43 @@ input[type="range"]::-moz-range-thumb {
 
 .placeholder-card {
   background:
-    radial-gradient(ellipse at top, rgba(212, 168, 87, 0.08), transparent 60%),
-    linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
+    radial-gradient(ellipse at top, rgba(255, 255, 255, 0.04), transparent 60%),
+    linear-gradient(180deg, #1d1d1d 0%, #0a0a0a 100%);
   border: 1px solid var(--line);
+}
+
+.photo-frame {
+  position: relative;
+  filter: grayscale(1) contrast(1.05);
+  transform-origin: center;
+  will-change: transform;
+}
+
+.photo-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.55) 100%);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 3;
+}
+
+@keyframes breath {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.018); }
+}
+
+.idle-breath {
+  animation: breath 6.5s ease-in-out infinite;
+}
+
+.hero-bg-gradient {
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 45%, rgba(255,255,255,0.06), transparent 70%),
+    radial-gradient(ellipse at bottom, rgba(255,255,255,0.02), transparent 70%),
+    #0a0a0a;
 }
 
 @media (prefers-reduced-motion: reduce) {
