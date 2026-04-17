@@ -27,8 +27,7 @@ export function Hero() {
       tl.from(".hero-meta-top > *", { y: 20, opacity: 0, duration: 0.9, stagger: 0.08 })
         .from(farhad, { yPercent: -110, duration: 1.3 }, "-=0.6")
         .from(person, { scale: 1.06, opacity: 0, duration: 1.6, transformOrigin: "center bottom" }, "-=1.0")
-        .from(ivanov, { yPercent: 110, duration: 1.3 }, "-=1.2")
-        .from(".hero-bottom > *", { y: 24, opacity: 0, duration: 0.8, stagger: 0.08 }, "-=0.9");
+        .from(ivanov, { yPercent: 110, duration: 1.3 }, "-=1.2");
 
       gsap.to(bg, {
         y: 30,
