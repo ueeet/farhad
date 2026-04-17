@@ -143,7 +143,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-text-muted">
+      <div className="absolute z-[10] bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-text-muted">
         <span>скролл</span>
         <span className="block w-px h-8 bg-text-muted/40 animate-pulse" />
       </div>
