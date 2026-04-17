@@ -124,6 +124,24 @@ export function Services() {
                   </li>
                 ))}
               </ul>
+
+              <div className="mt-8 flex flex-wrap items-center justify-between gap-4">
+                <div className="text-sm">
+                  <span className="text-text-muted">от </span>
+                  <span className="font-display font-black text-2xl lg:text-3xl text-text tabular">{hero.from}</span>
+                </div>
+                <a
+                  href={`${waBase}${encodeURIComponent(hero.waMsg)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-gold text-bg text-sm font-medium hover:bg-gold-bright transition-colors"
+                >
+                  {hero.cta}
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                    <path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
+                  </svg>
+                </a>
+              </div>
             </div>
           </article>
 
