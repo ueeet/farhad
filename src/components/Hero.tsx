@@ -9,43 +9,54 @@ gsap.registerPlugin(ScrollTrigger);
 
 export function Hero() {
   const root = useRef<HTMLElement>(null);
-  const photoRef = useRef<HTMLDivElement>(null);
+  const bgRef = useRef<HTMLDivElement>(null);
+  const personRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
     () => {
       const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
 
       tl.from(".hero-meta-top > *", { y: 20, opacity: 0, duration: 0.9, stagger: 0.08 })
-        .from(".hero-side > *", { y: 20, opacity: 0, duration: 0.9, stagger: 0.1 }, "-=0.6")
-        .from(".hero-title-farhad", { yPercent: -110, duration: 1.3 }, "-=0.7")
-        .from(".hero-photo-wrap", { scale: 1.12, opacity: 0, duration: 1.6 }, "-=1.0")
+        .from(".hero-title-farhad", { yPercent: -110, duration: 1.3 }, "-=0.6")
+        .from(".hero-person", { scale: 1.06, opacity: 0, duration: 1.6, transformOrigin: "center bottom" }, "-=1.0")
         .from(".hero-title-ivanov", { yPercent: 110, duration: 1.3 }, "-=1.2")
         .from(".hero-bottom > *", { y: 24, opacity: 0, duration: 0.8, stagger: 0.08 }, "-=0.9");
 
-      const photo = photoRef.current;
-      if (!photo) return;
+      const bg = bgRef.current;
+      const person = personRef.current;
+      if (!bg || !person) return;
 
-      gsap.to(photo, {
-        y: 40,
+      gsap.to(bg, {
+        y: 30,
+        scale: 1.04,
         ease: "none",
         scrollTrigger: {
           trigger: root.current,
           start: "top top",
           end: "bottom top",
-          scrub: 0.8,
+          scrub: 1.2,
         },
       });
 
-      const qx = gsap.quickTo(photo, "x", { duration: 1.1, ease: "expo.out" });
-      const qy = gsap.quickTo(photo, "y", { duration: 1.1, ease: "expo.out" });
+      gsap.to(person, {
+        y: 80,
+        ease: "none",
+        scrollTrigger: {
+          trigger: root.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: 0.6,
+        },
+      });
+
+      const px = gsap.quickTo(person, "x", { duration: 1.1, ease: "expo.out" });
+      const bx = gsap.quickTo(bg, "x", { duration: 1.4, ease: "expo.out" });
 
       const onMouseMove = (e: MouseEvent) => {
         const vw = window.innerWidth;
-        const vh = window.innerHeight;
-        const dx = (e.clientX / vw - 0.5) * 20;
-        const dy = (e.clientY / vh - 0.5) * 14;
-        qx(dx);
-        qy(dy);
+        const dx = (e.clientX / vw - 0.5) * 18;
+        px(dx);
+        bx(dx * -0.4);
       };
       window.addEventListener("mousemove", onMouseMove);
       return () => window.removeEventListener("mousemove", onMouseMove);
