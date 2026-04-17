@@ -49,9 +49,7 @@ export function Nav() {
           className="font-display font-black text-xl tracking-[-0.04em] lg:flex-none"
           aria-label="В начало"
         >
-          ФИ
-          <span className="text-text-muted">/</span>
-          2026
+          FI
         </a>
 
         <nav className="hidden lg:flex items-center gap-8 flex-1 justify-end">
