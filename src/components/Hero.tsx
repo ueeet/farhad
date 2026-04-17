@@ -96,46 +96,37 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative w-full h-[min(78vh,820px)] flex items-center justify-center">
+        <div className="relative w-full h-[min(82vh,880px)] flex items-center justify-center">
           <h1 className="sr-only">Фархад Иванов</h1>
 
           <div
             aria-hidden
-            className="absolute inset-x-0 top-[4%] lg:top-[6%] z-[1] overflow-hidden pointer-events-none"
+            className="absolute inset-x-0 top-[2%] lg:top-[4%] z-[1] overflow-hidden pointer-events-none"
           >
-            <span className="hero-title-farhad block font-display font-black leading-[0.82] tracking-[-0.05em] text-text text-[clamp(3.5rem,13vw,14rem)] text-left pl-[3%] pr-[2%]">
+            <span className="hero-title-farhad block font-display font-black leading-[0.82] tracking-[-0.05em] text-text text-[clamp(4rem,15vw,17rem)] text-left pl-[2%] pr-[2%]">
               ФАРХАД
             </span>
           </div>
 
           <div
             ref={photoRef}
-            className="hero-photo-wrap photo-frame relative z-[2] w-[min(68vw,940px)] aspect-[16/9] rounded-sm overflow-hidden will-change-transform"
+            className="hero-photo-wrap hero-photo-bleed z-[2] w-[min(96vw,1600px)] aspect-[16/9]"
+            style={{ position: "relative" }}
           >
-            <div className="hero-photo-glow" aria-hidden />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/hero.png"
               alt="Фархад Иванов — ведущий мероприятий"
-              className="absolute inset-0 w-full h-full object-cover z-[1]"
               loading="eager"
               draggable={false}
             />
-            <div className="absolute top-3 left-3 right-3 flex items-center justify-between text-[10px] uppercase tracking-[0.25em] text-text z-[5] mix-blend-difference">
-              <span>ФИ / 01</span>
-              <span className="tabular">01 — 04</span>
-            </div>
-            <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[10px] uppercase tracking-[0.25em] text-text z-[5] mix-blend-difference">
-              <span>Выдержка</span>
-              <span className="tabular">1 / 200</span>
-            </div>
           </div>
 
           <div
             aria-hidden
-            className="absolute inset-x-0 bottom-[4%] lg:bottom-[6%] z-[3] overflow-hidden pointer-events-none"
+            className="absolute inset-x-0 bottom-[2%] lg:bottom-[4%] z-[3] overflow-hidden pointer-events-none"
           >
-            <span className="hero-title-ivanov block font-display font-black italic leading-[0.82] tracking-[-0.05em] text-text-muted text-[clamp(3.5rem,13vw,14rem)] text-right pr-[3%] pl-[2%]">
+            <span className="hero-title-ivanov block font-display font-black italic leading-[0.82] tracking-[-0.05em] text-text text-[clamp(4rem,15vw,17rem)] text-right pr-[2%] pl-[2%]">
               иванов
             </span>
           </div>
