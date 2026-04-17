@@ -144,7 +144,7 @@ export function Calculator() {
             <div className="text-xs uppercase tracking-[0.3em] text-gold mb-6">
               / 03 — Калькулятор
             </div>
-            <h2 className="font-display font-black text-5xl lg:text-7xl leading-[0.9] tracking-tight max-w-3xl">
+            <h2 className="font-display font-black text-5xl lg:text-8xl leading-[0.9] tracking-[-0.04em] balance max-w-3xl">
               Сколько стоит <span className="text-gradient-gold italic">ваш вечер</span>
             </h2>
           </div>
