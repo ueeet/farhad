@@ -250,8 +250,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .hero-photo-bleed {
-  position: absolute;
-  inset: 0;
+  position: relative;
   filter: contrast(1.05) saturate(1.08);
   transform-origin: center;
   will-change: transform;
