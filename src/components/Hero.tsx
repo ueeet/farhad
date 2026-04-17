@@ -127,7 +127,7 @@ export function Hero() {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/hero.jpg"
+                src="/images/hero.png"
                 alt=""
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="eager"
@@ -141,7 +141,7 @@ export function Hero() {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/hero.jpg"
+                src="/images/hero.png"
                 alt="Фархад Иванов — ведущий мероприятий"
                 className="absolute inset-0 w-full h-full object-cover z-[1]"
                 loading="eager"
