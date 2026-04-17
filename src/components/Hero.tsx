@@ -10,21 +10,25 @@ gsap.registerPlugin(ScrollTrigger);
 export function Hero() {
   const root = useRef<HTMLElement>(null);
   const photoRef = useRef<HTMLDivElement>(null);
+  const ghostRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
     () => {
       const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
 
       tl.from(".hero-meta-top > *", { y: 20, opacity: 0, duration: 0.9, stagger: 0.08 })
-        .from(".hero-title-line", { yPercent: 110, duration: 1.3, stagger: 0.14 }, "-=0.5")
+        .from(".hero-side > *", { y: 20, opacity: 0, duration: 0.9, stagger: 0.1 }, "-=0.6")
+        .from(".hero-title-line", { yPercent: 110, duration: 1.3, stagger: 0.14 }, "-=0.7")
         .from(".hero-photo-wrap", { scale: 1.12, opacity: 0, duration: 1.6 }, 0.2)
+        .from(".hero-ghost-wrap", { opacity: 0, xPercent: -10, duration: 1.6 }, 0.3)
         .from(".hero-bottom > *", { y: 24, opacity: 0, duration: 0.8, stagger: 0.08 }, "-=0.9");
 
       const photo = photoRef.current;
-      if (!photo) return;
+      const ghost = ghostRef.current;
+      if (!photo || !ghost) return;
 
       gsap.to(photo, {
-        rotation: -4,
+        rotation: -3,
         y: 60,
         ease: "none",
         scrollTrigger: {
@@ -35,8 +39,23 @@ export function Hero() {
         },
       });
 
+      gsap.to(ghost, {
+        rotation: 4,
+        y: 110,
+        xPercent: -6,
+        ease: "none",
+        scrollTrigger: {
+          trigger: root.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: 1.2,
+        },
+      });
+
       const qx = gsap.quickTo(photo, "x", { duration: 1.1, ease: "expo.out" });
       const qy = gsap.quickTo(photo, "y", { duration: 1.1, ease: "expo.out" });
+      const gx = gsap.quickTo(ghost, "x", { duration: 1.4, ease: "expo.out" });
+      const gy = gsap.quickTo(ghost, "y", { duration: 1.4, ease: "expo.out" });
 
       const onMouseMove = (e: MouseEvent) => {
         const vw = window.innerWidth;
@@ -45,6 +64,8 @@ export function Hero() {
         const dy = (e.clientY / vh - 0.5) * 20;
         qx(dx);
         qy(dy);
+        gx(dx * -1.8);
+        gy(dy * -1.4);
       };
       window.addEventListener("mousemove", onMouseMove);
       return () => window.removeEventListener("mousemove", onMouseMove);
@@ -71,20 +92,66 @@ export function Hero() {
       </div>
 
       <div className="relative mx-auto w-full max-w-[1600px] px-6 lg:px-12 flex items-center justify-center">
+        <div className="pointer-events-none absolute left-6 lg:left-12 top-1/2 -translate-y-1/2 hidden md:flex flex-col gap-8 text-[10px] uppercase text-text-muted hero-side z-[3]">
+          <div className="hero-mark">
+            <div className="text-text/60">N° 01</div>
+            <div className="mt-1 text-text-muted/70">Portrait</div>
+          </div>
+          <div className="w-px h-24 bg-line" />
+          <div className="hero-mark">
+            <div className="text-text/60">2026</div>
+            <div className="mt-1 text-text-muted/70">Cover</div>
+          </div>
+        </div>
+
+        <div className="pointer-events-none absolute right-6 lg:right-12 top-1/2 -translate-y-1/2 hidden md:flex flex-col items-end gap-8 text-[10px] uppercase text-text-muted hero-side z-[3]">
+          <div className="hero-mark text-right">
+            <div className="text-text/60">ISO 400</div>
+            <div className="mt-1 text-text-muted/70">35 mm</div>
+          </div>
+          <div className="w-px h-24 bg-line ml-auto" />
+          <div className="hero-mark text-right">
+            <div className="text-text/60">Host</div>
+            <div className="mt-1 text-text-muted/70">Фархад · Иванов</div>
+          </div>
+        </div>
+
         <div className="relative w-full">
-          <div className="relative mx-auto w-[clamp(220px,30vw,440px)] aspect-[3/4] idle-breath">
+          <div className="relative mx-auto w-[clamp(240px,32vw,460px)] aspect-[3/4] idle-breath">
+            <div className="hero-photo-glow" aria-hidden />
+
+            <div
+              ref={ghostRef}
+              className="hero-ghost-wrap photo-ghost will-change-transform"
+              aria-hidden
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/hero.jpg"
+                alt=""
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="eager"
+                draggable={false}
+              />
+            </div>
+
             <div
               ref={photoRef}
               className="hero-photo-wrap photo-frame absolute inset-0 rounded-sm overflow-hidden placeholder-card will-change-transform"
             >
-              <div className="absolute inset-0 flex items-center justify-center text-text-muted text-[10px] uppercase tracking-[0.3em] z-[2]">
-                фото · портрет
-              </div>
-              <div className="absolute top-3 left-3 right-3 flex items-center justify-between text-[9px] uppercase tracking-[0.25em] text-text-muted z-[2]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/hero.jpg"
+                alt="Фархад Иванов — ведущий мероприятий"
+                className="absolute inset-0 w-full h-full object-cover z-[1]"
+                loading="eager"
+                draggable={false}
+              />
+              <div className="absolute top-3 left-3 right-3 flex items-center justify-between text-[9px] uppercase tracking-[0.25em] text-text z-[5] mix-blend-difference">
                 <span>ФИ / 01</span>
                 <span className="tabular">01 — 04</span>
               </div>
-              <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[9px] uppercase tracking-[0.25em] text-text-muted z-[2]">
+              <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[9px] uppercase tracking-[0.25em] text-text z-[5] mix-blend-difference">
                 <span>Выдержка</span>
                 <span className="tabular">1 / 200</span>
               </div>
@@ -93,7 +160,7 @@ export function Hero() {
 
           <h1
             aria-label="Фархад Иванов"
-            className="pointer-events-none absolute inset-0 flex flex-col justify-center items-center font-display font-black leading-[0.84] tracking-[-0.06em] text-center text-text"
+            className="pointer-events-none absolute inset-0 flex flex-col justify-center items-center font-display font-black leading-[0.84] tracking-[-0.06em] text-center text-text z-[2]"
           >
             <span className="block overflow-hidden w-full">
               <span className="hero-title-line block text-[clamp(3.5rem,14vw,14rem)]">
