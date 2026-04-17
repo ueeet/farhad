@@ -181,6 +181,24 @@ export function Services() {
                     </li>
                   ))}
                 </ul>
+
+                <div className="mt-6 pt-5 border-t border-line flex flex-wrap items-center justify-between gap-3">
+                  <div className="text-xs">
+                    <span className="text-text-muted">от </span>
+                    <span className="font-display font-black text-xl text-text tabular">{s.from}</span>
+                  </div>
+                  <a
+                    href={`${waBase}${encodeURIComponent(s.waMsg)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold/50 text-gold text-xs hover:border-gold hover:bg-gold/10 transition-all"
+                  >
+                    {s.cta}
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                      <path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
+                    </svg>
+                  </a>
+                </div>
               </div>
             </article>
           ))}
