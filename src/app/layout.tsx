@@ -34,16 +34,8 @@ export default function RootLayout({
   return (
     <html
       lang="ru"
-      className={`${inter.variable}`}
+      className={`${inter.variable} ${unbounded.variable}`}
     >
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Oddval:opsz,wght@10..72,400..900&display=swap"
-        />
-      </head>
       <body>
         <a href="#top" className="skip-link">
           Перейти к содержимому
