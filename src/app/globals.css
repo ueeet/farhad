@@ -186,7 +186,7 @@ input[type="range"] {
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
-  background: linear-gradient(90deg, var(--gold) 0%, var(--gold) var(--val, 50%), #1f1f1f var(--val, 50%));
+  background: linear-gradient(90deg, #ffffff 0%, #ffffff var(--val, 50%), #1f1f1f var(--val, 50%));
   height: 4px;
   border-radius: 2px;
 }
