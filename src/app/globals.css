@@ -287,12 +287,13 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .hero-person img {
-  height: 100%;
+  height: 88%;
   width: auto;
   max-width: none;
   object-fit: contain;
   object-position: bottom center;
   filter: contrast(1.05) saturate(1.06);
+  image-rendering: auto;
 }
 
 .hero-photo-glow {
