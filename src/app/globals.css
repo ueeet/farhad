@@ -283,16 +283,16 @@ input[type="range"]::-moz-range-thumb {
   pointer-events: none;
   transform-origin: center bottom;
   will-change: transform;
+  overflow: hidden;
 }
 
 .hero-person img {
-  height: 108%;
+  height: 100%;
   width: auto;
   max-width: none;
   object-fit: contain;
   object-position: bottom center;
   filter: contrast(1.05) saturate(1.06);
-  transform: translateY(2%);
 }
 
 .hero-photo-glow {
