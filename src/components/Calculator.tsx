@@ -264,7 +264,7 @@ export function Calculator() {
 
               <div
                 ref={totalRef}
-                className="font-display font-black text-5xl lg:text-6xl leading-none text-gradient-gold"
+                className="font-display font-black text-5xl lg:text-6xl leading-none text-gradient-gold tabular"
               >
                 {formatPrice(total)} ₽
               </div>
