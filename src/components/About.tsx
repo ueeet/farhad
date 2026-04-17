@@ -38,6 +38,19 @@ export function About() {
         ease: "power3.out",
       });
 
+      gsap.utils.toArray<HTMLElement>(".about-fill").forEach((el) => {
+        gsap.to(el, {
+          backgroundPositionX: "0%",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+            end: "top 45%",
+            scrub: 0.8,
+          },
+          ease: "none",
+        });
+      });
+
       gsap.from(".stat-block", {
         scrollTrigger: {
           trigger: ".stats-grid",
@@ -48,6 +61,17 @@ export function About() {
         duration: 0.7,
         stagger: 0.1,
         ease: "power2.out",
+      });
+
+      gsap.to(".stat-num", {
+        scrollTrigger: {
+          trigger: ".stats-grid",
+          start: "top 80%",
+        },
+        duration: 1.4,
+        ease: "expo.out",
+        textContent: (i, el) => el.getAttribute("data-to") ?? "",
+        snap: { textContent: 1 },
       });
     },
     { scope: root }
