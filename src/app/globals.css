@@ -42,8 +42,8 @@ body {
 }
 
 ::selection {
-  background: var(--gold);
-  color: #050505;
+  background: #ffffff;
+  color: #0a0a0a;
 }
 
 ::-webkit-scrollbar {
