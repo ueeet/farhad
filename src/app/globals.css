@@ -70,7 +70,7 @@ body {
 }
 
 .text-gradient-gold {
-  background: linear-gradient(135deg, #f5cd7e 0%, #d4a857 50%, #8a6a2a 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #d6d3cb 55%, #7a7870 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
