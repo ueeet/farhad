@@ -11,20 +11,24 @@ export function Hero() {
   const root = useRef<HTMLElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
   const personRef = useRef<HTMLDivElement>(null);
+  const farhadRef = useRef<HTMLSpanElement>(null);
+  const ivanovRef = useRef<HTMLSpanElement>(null);
 
   useGSAP(
     () => {
+      const bg = bgRef.current;
+      const person = personRef.current;
+      const farhad = farhadRef.current;
+      const ivanov = ivanovRef.current;
+      if (!bg || !person || !farhad || !ivanov) return;
+
       const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
 
       tl.from(".hero-meta-top > *", { y: 20, opacity: 0, duration: 0.9, stagger: 0.08 })
-        .from(".hero-title-farhad", { yPercent: -110, duration: 1.3 }, "-=0.6")
-        .from(".hero-person", { scale: 1.06, opacity: 0, duration: 1.6, transformOrigin: "center bottom" }, "-=1.0")
-        .from(".hero-title-ivanov", { yPercent: 110, duration: 1.3 }, "-=1.2")
+        .from(farhad, { yPercent: -110, duration: 1.3 }, "-=0.6")
+        .from(person, { scale: 1.06, opacity: 0, duration: 1.6, transformOrigin: "center bottom" }, "-=1.0")
+        .from(ivanov, { yPercent: 110, duration: 1.3 }, "-=1.2")
         .from(".hero-bottom > *", { y: 24, opacity: 0, duration: 0.8, stagger: 0.08 }, "-=0.9");
-
-      const bg = bgRef.current;
-      const person = personRef.current;
-      if (!bg || !person) return;
 
       gsap.to(bg, {
         y: 30,
