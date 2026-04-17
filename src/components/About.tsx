@@ -64,7 +64,7 @@ export function About() {
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-20">
           <div className="lg:col-span-5 lg:sticky lg:top-32 lg:self-start">
             <div className="text-xs uppercase tracking-[0.3em] text-gold mb-6">
-              / 01 — Обо мне
+              / Обо мне
             </div>
             <h2 className="font-display font-black text-5xl lg:text-7xl leading-[0.9] tracking-[-0.04em] balance">
               <span className="about-line block">Не просто</span>
