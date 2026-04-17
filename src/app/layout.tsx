@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 const oddval = Oddval({
-  variable: "--font-display",
+  variable: "--font-oddval",
   subsets: ["latin", "cyrillic"],
   display: "swap",
 });
