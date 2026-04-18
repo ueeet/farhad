@@ -142,7 +142,7 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative z-[10] mx-auto w-full max-w-[1600px] px-6 lg:px-12 hero-meta-top flex items-start justify-between gap-6 text-[11px] uppercase tracking-[0.3em] text-text-muted">
+      <div className="relative z-[10] mx-auto w-full max-w-[1600px] px-6 lg:px-12 hero-meta-top flex items-start justify-between gap-6 text-xs uppercase tracking-[0.3em] text-text-muted">
         <div className="flex items-baseline gap-2">
           <span>Ведущий</span>
           <span className="relative inline-flex overflow-hidden leading-none h-[1em] items-end">
