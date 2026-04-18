@@ -313,7 +313,7 @@ input[type="range"]::-moz-range-thumb {
   pointer-events: none;
   z-index: -1;
   background:
-    radial-gradient(ellipse 55% 60% at 50% 45%, rgba(180, 110, 55, 0.28), transparent 70%);
+    radial-gradient(ellipse 55% 60% at 50% 45%, hsl(38 70% 40% / 0.32), transparent 70%);
   filter: blur(30px);
 }
 
