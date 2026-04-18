@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const leftLinks = [
   { href: "#services", label: "Услуги" },
   { href: "#showreel", label: "Шоурил" },
-  { href: "#reviews", label: "Отзывы" },
+  { href: "#gallery", label: "Работы" },
 ];
 
 const rightLinks = [
