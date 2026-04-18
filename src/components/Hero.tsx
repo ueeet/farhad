@@ -196,16 +196,15 @@ export function Hero() {
       <div className="relative z-[10] mx-auto w-full max-w-[1600px] px-6 lg:px-12 pb-4 lg:pb-6 hero-bottom flex flex-col lg:flex-row lg:items-end justify-between gap-6">
         <a
           href="#calc"
-          className="inline-flex items-stretch rounded-full overflow-hidden bg-bg/40 backdrop-blur-sm border border-text/30 hover:border-text/70 transition-all duration-300 group w-fit"
+          className="inline-flex items-stretch rounded-full overflow-hidden bg-bg/40 backdrop-blur-sm border border-gold/40 hover:border-gold transition-all duration-300 group w-fit"
         >
           <span className="flex items-center gap-2 pl-5 pr-4 py-3">
-            <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse shadow-[0_0_8px_var(--gold)]" />
             <span className="text-xs uppercase tracking-[0.2em] text-text">Обсудить дату</span>
           </span>
-          <span className="flex items-center gap-2 px-4 py-3 border-l border-text/20 bg-text/5">
-            <span className="text-xs uppercase tracking-[0.2em] text-text-muted">от</span>
-            <span className="font-display font-black text-text tabular text-sm">80 000&nbsp;₽</span>
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" className="ml-1 group-hover:translate-x-0.5 transition-transform">
+          <span className="flex items-center gap-2 px-4 py-3 border-l border-gold/30 bg-gold/10">
+            <span className="text-xs uppercase tracking-[0.2em] text-gold-bright">от</span>
+            <span className="font-display font-black text-gold-bright tabular text-sm">80 000&nbsp;₽</span>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" className="ml-1 text-gold-bright group-hover:translate-x-0.5 transition-transform">
               <path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
             </svg>
           </span>
