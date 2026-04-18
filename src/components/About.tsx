@@ -71,17 +71,22 @@ export function About() {
           </div>
         </div>
 
-        <div className="facts-grid mt-20 lg:mt-28 pt-12 lg:pt-16 border-t border-line grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="facts-grid mt-20 lg:mt-28 grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
           {facts.map((f, i) => (
-            <div key={f.headline} className="fact-card">
-              <div className="font-display text-[11px] tabular text-text-muted mb-4 tracking-[0.2em]">
+            <div
+              key={f.headline}
+              className="fact-card group relative aspect-square flex flex-col justify-between p-6 lg:p-8 rounded-2xl border border-line bg-bg-card/40 hover:border-gold/50 hover:bg-bg-card transition-colors"
+            >
+              <div className="font-display text-[11px] tabular text-gold/80 tracking-[0.2em]">
                 / 0{i + 1}
               </div>
-              <div className="font-display font-black text-2xl lg:text-4xl text-text leading-[1.05] tracking-[-0.02em] mb-3 balance">
-                {f.headline}
-              </div>
-              <div className="text-sm lg:text-base text-text-muted leading-relaxed pretty">
-                {f.sub}
+              <div>
+                <div className="font-display font-black text-2xl lg:text-3xl text-text leading-[1.05] tracking-[-0.02em] mb-3 balance">
+                  {f.headline}
+                </div>
+                <div className="text-xs lg:text-sm text-text-muted leading-relaxed pretty">
+                  {f.sub}
+                </div>
               </div>
             </div>
           ))}
