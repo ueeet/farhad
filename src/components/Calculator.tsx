@@ -150,7 +150,7 @@ export function Calculator() {
 
       <div className="mx-auto max-w-[1400px] px-6 lg:px-12 relative">
         <div className="grid lg:grid-cols-12 gap-8">
-          <div className="lg:col-span-8 space-y-6 calc-anim">
+          <div className="lg:col-span-7 space-y-6 calc-anim">
             <div className="mb-4">
               <div className="text-xs uppercase tracking-[0.3em] text-gold mb-6">
                 / Смета
