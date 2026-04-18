@@ -101,7 +101,7 @@ export function Gallery() {
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-              <div className="absolute top-3 left-3 text-[10px] uppercase tracking-widest text-gold opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <div className="absolute top-3 left-3 text-xs uppercase tracking-widest text-gold opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 {it.tag}
               </div>
 
