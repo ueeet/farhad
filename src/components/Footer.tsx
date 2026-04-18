@@ -5,7 +5,7 @@ export function Footer() {
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12">
           <div className="lg:col-span-5">
             <div className="font-display font-black text-3xl lg:text-4xl tracking-[-0.04em]">
-              ФАРХАД<span className="text-gold">.</span>ИВАНОВ
+              ФАРХАД ИВАНОВ
             </div>
             <p className="mt-6 text-sm text-text-muted max-w-sm pretty">
               Ведущий свадеб, корпоративов и ТВ-проектов. Казань, Набережные
