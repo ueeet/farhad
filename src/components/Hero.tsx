@@ -52,6 +52,28 @@ export function Hero() {
         },
       });
 
+      gsap.to(farhad, {
+        xPercent: -130,
+        ease: "power2.in",
+        scrollTrigger: {
+          trigger: root.current,
+          start: "top top",
+          end: "55% top",
+          scrub: 1.1,
+        },
+      });
+
+      gsap.to(ivanov, {
+        xPercent: 130,
+        ease: "power2.in",
+        scrollTrigger: {
+          trigger: root.current,
+          start: "25% top",
+          end: "85% top",
+          scrub: 1.1,
+        },
+      });
+
       const px = gsap.quickTo(person, "x", { duration: 1.1, ease: "expo.out" });
       const bx = gsap.quickTo(bg, "x", { duration: 1.4, ease: "expo.out" });
       const fx = gsap.quickTo(farhad, "x", { duration: 1.2, ease: "expo.out" });
