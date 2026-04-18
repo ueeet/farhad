@@ -59,7 +59,11 @@ export function Faq() {
       });
 
       gsap.from(".faq-anim", {
-        scrollTrigger: { trigger: root.current, start: "top 75%" },
+        scrollTrigger: {
+          trigger: root.current,
+          start: "top 75%",
+          toggleActions: "play reverse play reverse",
+        },
         y: 60,
         rotation: (i) => (i === 0 ? 0 : i % 2 === 1 ? -1.5 : 1.5),
         opacity: 0,
