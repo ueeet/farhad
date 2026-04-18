@@ -211,7 +211,7 @@ export function Hero() {
           </span>
         </a>
 
-        <div className="flex items-end gap-x-4 sm:gap-x-6 lg:gap-x-10 text-[10px] lg:text-[11px] text-text-muted uppercase tracking-[0.18em]">
+        <div className="flex items-end gap-x-4 sm:gap-x-6 lg:gap-x-10 text-xs text-text-muted uppercase tracking-[0.18em]">
           <div>
             <div className="font-display font-black text-xl lg:text-2xl text-text tabular tracking-tight leading-none">500+</div>
             <div className="mt-1">мероприятий</div>
