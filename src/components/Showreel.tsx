@@ -13,13 +13,24 @@ export function Showreel() {
 
   useGSAP(
     () => {
+      gsap.from(root.current!.querySelector("h2"), {
+        scrollTrigger: { trigger: root.current, start: "top 80%" },
+        y: 80,
+        rotation: -2.5,
+        opacity: 0,
+        transformOrigin: "left bottom",
+        duration: 1.3,
+        ease: "expo.out",
+      });
+
       gsap.from(".sr-anim", {
         scrollTrigger: { trigger: root.current, start: "top 75%" },
-        y: 50,
+        y: 70,
+        scale: 0.96,
         opacity: 0,
-        duration: 1,
-        stagger: 0.12,
-        ease: "power3.out",
+        duration: 1.1,
+        stagger: 0.18,
+        ease: "expo.out",
       });
     },
     { scope: root }
