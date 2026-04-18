@@ -37,12 +37,6 @@ const durations = [
   { id: "all", label: "Весь день", mult: 1.9 },
 ];
 
-const days = [
-  { id: "weekday", label: "Будни", mult: 1.0 },
-  { id: "weekend", label: "Выходной", mult: 1.15 },
-  { id: "holiday", label: "Праздничный день", mult: 1.3 },
-];
-
 const extras = [
   { id: "dj", label: "DJ", price: 30000 },
   { id: "sound", label: "Звук и свет", price: 25000 },
