@@ -88,7 +88,7 @@ export function About() {
         </div>
 
         <div className="facts-grid mt-20 lg:mt-28 grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
-          {facts.map((f, i) => (
+          {facts.map((f) => (
             <div
               key={f.headline}
               className="fact-card group relative aspect-square overflow-hidden rounded-2xl border border-line bg-bg-card"
