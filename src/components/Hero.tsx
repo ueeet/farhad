@@ -203,7 +203,7 @@ export function Hero() {
             <span className="text-xs uppercase tracking-[0.2em] text-text">Обсудить дату</span>
           </span>
           <span className="flex items-center gap-2 px-4 py-3 border-l border-text/20 bg-text/5">
-            <span className="text-[10px] uppercase tracking-[0.2em] text-text-muted">от</span>
+            <span className="text-xs uppercase tracking-[0.2em] text-text-muted">от</span>
             <span className="font-display font-black text-text tabular text-sm">80 000&nbsp;₽</span>
             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" className="ml-1 group-hover:translate-x-0.5 transition-transform">
               <path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
