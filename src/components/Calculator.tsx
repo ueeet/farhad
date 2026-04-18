@@ -165,27 +165,16 @@ export function Calculator() {
         </div>
 
         <div className="grid lg:grid-cols-12 gap-8">
-          <div className="lg:col-span-8 space-y-10 calc-anim">
+          <div className="lg:col-span-8 space-y-6 calc-anim">
             <Block label="Тип мероприятия">
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                {eventTypes.map((e) => (
-                  <button
-                    key={e.id}
-                    onClick={() => setEventType(e)}
-                    className={`text-left p-5 rounded-2xl border transition-all duration-300 ${
-                      eventType.id === e.id
-                        ? "border-gold bg-gold/5"
-                        : "border-line hover:border-gold/40"
-                    }`}
-                  >
-                    <div className="font-display font-bold">{e.label}</div>
-                    <div className="text-xs text-text-muted mt-1">{e.hint}</div>
-                  </button>
-                ))}
-              </div>
+              <ChipGroup
+                items={eventTypes}
+                value={eventType.id}
+                onChange={(id) => setEventType(eventTypes.find((e) => e.id === id)!)}
+              />
             </Block>
 
-            <Block label={`Количество гостей: ${guests}`}>
+            <Block label={`Гостей: ${guests}`}>
               <input
                 type="range"
                 min={10}
@@ -196,7 +185,7 @@ export function Calculator() {
                 style={{ "--val": `${guestPercent}%` } as React.CSSProperties}
                 className="w-full"
               />
-              <div className="flex justify-between text-xs text-text-muted mt-3">
+              <div className="flex justify-between text-[11px] text-text-muted mt-2">
                 <span>10</span>
                 <span>100</span>
                 <span>250</span>
@@ -204,59 +193,51 @@ export function Calculator() {
               </div>
             </Block>
 
-            <Block label="Где проводим">
-              <ChipGroup
-                items={cities}
-                value={city.id}
-                onChange={(id) => setCity(cities.find((c) => c.id === id)!)}
-              />
-            </Block>
+            <div className="grid sm:grid-cols-2 gap-6">
+              <Block label="Город">
+                <ChipGroup
+                  items={cities}
+                  value={city.id}
+                  onChange={(id) => setCity(cities.find((c) => c.id === id)!)}
+                />
+              </Block>
 
-            <Block label="Длительность работы">
-              <ChipGroup
-                items={durations}
-                value={duration.id}
-                onChange={(id) => setDuration(durations.find((d) => d.id === id)!)}
-              />
-            </Block>
-
-            <Block label="День проведения">
-              <ChipGroup
-                items={days}
-                value={day.id}
-                onChange={(id) => setDay(days.find((d) => d.id === id)!)}
-              />
-            </Block>
+              <Block label="Длительность">
+                <ChipGroup
+                  items={durations}
+                  value={duration.id}
+                  onChange={(id) => setDuration(durations.find((d) => d.id === id)!)}
+                />
+              </Block>
+            </div>
 
             <Block label="Дополнительно">
-              <div className="grid sm:grid-cols-2 gap-3">
+              <div className="flex flex-wrap gap-2">
                 {extras.map((e) => {
                   const active = chosenExtras.includes(e.id);
                   return (
                     <button
                       key={e.id}
                       onClick={() => toggleExtra(e.id)}
-                      className={`flex items-center justify-between p-4 rounded-xl border transition-all duration-300 ${
+                      className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-full border text-sm transition-all duration-300 ${
                         active
-                          ? "border-gold bg-gold/5"
-                          : "border-line hover:border-gold/40"
+                          ? "border-gold bg-gold/5 text-text"
+                          : "border-line text-text-muted hover:border-gold/40 hover:text-text"
                       }`}
                     >
-                      <span className="flex items-center gap-3 text-sm">
-                        <span
-                          className={`w-5 h-5 rounded-md border flex items-center justify-center transition-colors ${
-                            active ? "bg-gold border-gold" : "border-line"
-                          }`}
-                        >
-                          {active && (
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
-                              <path d="M5 12l5 5L20 7" stroke="#0a0a0a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                            </svg>
-                          )}
-                        </span>
-                        {e.label}
+                      <span
+                        className={`w-4 h-4 rounded-full border flex items-center justify-center transition-colors ${
+                          active ? "bg-gold border-gold" : "border-line"
+                        }`}
+                      >
+                        {active && (
+                          <svg width="10" height="10" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12l5 5L20 7" stroke="#0a0a0a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        )}
                       </span>
-                      <span className="text-xs text-text-muted">
+                      {e.label}
+                      <span className="text-[11px] text-text-muted">
                         +{formatPrice(e.price)} ₽
                       </span>
                     </button>
