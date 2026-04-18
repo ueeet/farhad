@@ -136,7 +136,7 @@ export function Hero() {
           <span className="relative inline-flex overflow-hidden leading-none h-[1em] items-end">
             <span
               key={roleIdx}
-              className="role-rotator inline-block leading-none"
+              className="role-rotator inline-block leading-none text-text"
             >
               {roleWords[roleIdx]}
             </span>
