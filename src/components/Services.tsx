@@ -153,13 +153,9 @@ export function Services() {
               }`}
             >
               <div className="relative z-[2]">
-                <div className="flex items-start justify-between mb-8">
+                <div className="mb-8">
                   <span className="font-display text-xs text-text-muted">
-                    {s.no}                  </span>
-                  <span className="w-9 h-9 rounded-full border border-line flex items-center justify-center group-hover:border-gold group-hover:rotate-45 transition-all duration-500">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
-                      <path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" strokeWidth="1.5"/>
-                    </svg>
+                    {s.no}
                   </span>
                 </div>
 
