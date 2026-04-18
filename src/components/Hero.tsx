@@ -199,7 +199,7 @@ export function Hero() {
           className="inline-flex items-stretch rounded-full overflow-hidden bg-bg/40 backdrop-blur-sm border border-text/30 hover:border-text/70 transition-all duration-300 group w-fit"
         >
           <span className="flex items-center gap-2 pl-5 pr-4 py-3">
-            <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse shadow-[0_0_8px_var(--gold)]" />
             <span className="text-xs uppercase tracking-[0.2em] text-text">Обсудить дату</span>
           </span>
           <span className="flex items-center gap-2 px-4 py-3 border-l border-text/20 bg-text/5">
