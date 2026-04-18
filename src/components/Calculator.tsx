@@ -288,10 +288,10 @@ export function Calculator() {
                 )}
               </div>
 
-              <div className="mt-6 flex flex-wrap items-center gap-2 text-[11px] text-text-muted">
+              <div className="mt-6 flex flex-wrap items-center gap-2 text-xs text-text-muted">
                 <span className="inline-flex items-center gap-2 mr-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
-                  <span className="uppercase tracking-[0.2em]">Свободно</span>
+                  <span className="uppercase tracking-[0.2em] text-gold">Свободно</span>
                 </span>
                 {freeDates.map((d) => (
                   <span
