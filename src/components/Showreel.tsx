@@ -14,7 +14,11 @@ export function Showreel() {
   useGSAP(
     () => {
       gsap.from(root.current!.querySelector("h2"), {
-        scrollTrigger: { trigger: root.current, start: "top 80%" },
+        scrollTrigger: {
+          trigger: root.current,
+          start: "top 80%",
+          toggleActions: "play reverse play reverse",
+        },
         y: 80,
         rotation: -2.5,
         opacity: 0,
