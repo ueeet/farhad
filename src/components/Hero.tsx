@@ -34,11 +34,11 @@ export function Hero() {
 
       const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
 
-      tl.from(".hero-meta-top > *", { y: 20, duration: 0.8, stagger: 0.1 })
-        .fromTo(farhad, { xPercent: -120 }, { xPercent: 0, duration: 1.4 }, "-=0.2")
-        .fromTo(ivanov, { xPercent: 120 }, { xPercent: 0, duration: 1.4 }, "<")
-        .fromTo(person, { yPercent: 6 }, { yPercent: 0, duration: 1.4, transformOrigin: "center bottom" }, "-=1.2")
-        .from(".hero-bottom > *", { y: 40, duration: 0.9, stagger: 0.1 }, "-=0.8");
+      tl.to(farhad, { xPercent: 0, duration: 1.4 })
+        .to(ivanov, { xPercent: 0, duration: 1.4 }, "<")
+        .to(person, { yPercent: 0, duration: 1.4, transformOrigin: "center bottom" }, "-=1.2")
+        .from(".hero-meta-top > *", { y: 20, opacity: 0, duration: 0.8, stagger: 0.1 }, "-=1.3")
+        .from(".hero-bottom > *", { y: 40, opacity: 0, duration: 0.9, stagger: 0.1 }, "-=0.8");
 
       gsap.to(bg, {
         y: 30,
