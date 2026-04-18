@@ -136,11 +136,11 @@ export function About() {
               совпало с настроением вашего дня.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
+            <div className="facts-grid grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
               {facts.map((f) => (
                 <div
                   key={f.text}
-                  className="about-line group relative flex items-start gap-4 p-5 rounded-2xl border border-line bg-bg-card/40 hover:border-gold/60 hover:bg-bg-card transition-all"
+                  className="fact-card group relative flex items-start gap-4 p-5 rounded-2xl border border-line bg-bg-card/40 hover:border-gold/60 hover:bg-bg-card transition-all"
                 >
                   <span className="shrink-0 w-11 h-11 rounded-xl border border-gold/30 flex items-center justify-center text-gold group-hover:bg-gold/10 group-hover:border-gold/70 transition-colors">
                     {f.icon}
