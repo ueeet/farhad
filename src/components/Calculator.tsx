@@ -100,7 +100,11 @@ export function Calculator() {
   useGSAP(
     () => {
       gsap.from(root.current!.querySelector("h2"), {
-        scrollTrigger: { trigger: root.current, start: "top 80%" },
+        scrollTrigger: {
+          trigger: root.current,
+          start: "top 80%",
+          toggleActions: "play reverse play reverse",
+        },
         y: 90,
         rotation: -3,
         opacity: 0,
