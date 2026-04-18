@@ -81,7 +81,7 @@ export function Services() {
               / Услуги
             </div>
             <h2 className="font-display font-black text-5xl lg:text-8xl leading-[1.05] tracking-[-0.04em] balance max-w-3xl pb-2">
-              Что я <span className="text-gradient-gold italic inline-block pr-[0.1em]">веду</span>
+              Что я <span className="text-gradient-gold italic inline-block pr-[0.1em] pb-[0.18em] -mb-[0.18em]">веду</span>
             </h2>
           </div>
           <p className="text-text-muted max-w-sm pretty">
