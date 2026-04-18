@@ -64,7 +64,7 @@ export function Hero() {
       });
 
       gsap.to(farhad, {
-        xPercent: -130,
+        xPercent: -25,
         ease: "none",
         scrollTrigger: {
           trigger: root.current,
@@ -75,7 +75,7 @@ export function Hero() {
       });
 
       gsap.to(ivanov, {
-        xPercent: 130,
+        xPercent: 25,
         ease: "none",
         scrollTrigger: {
           trigger: root.current,
