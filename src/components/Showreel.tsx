@@ -1,15 +1,17 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const showreelUrl = "";
+
 export function Showreel() {
   const root = useRef<HTMLElement>(null);
-  const [playing, setPlaying] = useState(false);
+  const hasVideo = showreelUrl.length > 0;
 
   useGSAP(
     () => {
