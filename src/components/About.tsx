@@ -129,14 +129,14 @@ export function About() {
           </div>
 
           <div className="lg:col-span-7 space-y-8">
-            <p className="about-line text-lg lg:text-xl leading-relaxed text-text-muted pretty max-w-[65ch]">
+            <p className="about-line text-lg lg:text-xl leading-relaxed text-text-body pretty max-w-[65ch]">
               Меня зовут <span className="text-text">Фархад Иванов</span>. Веду
               мероприятия в Казани, Набережных Челнах и по всей России — от
               камерных свадеб до федеральных эфиров. Каждый сценарий пишу под
               пару, бренд или формат — без шаблонных шуток и неловких пауз.
             </p>
 
-            <p className="about-line text-base lg:text-lg leading-relaxed text-text-muted pretty max-w-[65ch]">
+            <p className="about-line text-base lg:text-lg leading-relaxed text-text-body pretty max-w-[65ch]">
               За плечами — Школа Первого канала, сотни корпоративов, телеэфиры и
               мероприятие с участием президента. Знаю, как держать зал в 30 и в
               500 человек. Работаю в смокинге и в свитере — главное, чтобы
