@@ -56,13 +56,34 @@ export function Services() {
 
   useGSAP(
     () => {
-      gsap.from(".service-card", {
-        scrollTrigger: { trigger: root.current, start: "top 75%" },
-        y: 80,
+      gsap.from(root.current!.querySelector("h2"), {
+        scrollTrigger: { trigger: root.current, start: "top 80%" },
+        y: 90,
+        rotation: -3,
+        opacity: 0,
+        transformOrigin: "left bottom",
+        duration: 1.3,
+        ease: "expo.out",
+      });
+
+      gsap.from(root.current!.querySelector("h2 ~ p"), {
+        scrollTrigger: { trigger: root.current, start: "top 80%" },
+        y: 30,
         opacity: 0,
         duration: 1,
-        stagger: 0.18,
+        delay: 0.3,
         ease: "power3.out",
+      });
+
+      gsap.from(".service-card", {
+        scrollTrigger: { trigger: ".service-card", start: "top 85%" },
+        y: 100,
+        rotation: (i) => (i % 2 === 0 ? -2.5 : 2.5),
+        scale: 0.94,
+        opacity: 0,
+        duration: 1.2,
+        stagger: 0.18,
+        ease: "expo.out",
       });
     },
     { scope: root }
