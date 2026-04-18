@@ -407,7 +407,7 @@ button:active, a:active {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: radial-gradient(400px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.7), transparent 40%);
+  background: radial-gradient(400px circle at var(--mx, 50%) var(--my, 50%), hsl(38 70% 65% / 0.55), transparent 42%);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
           mask-composite: exclude;
@@ -418,21 +418,5 @@ button:active, a:active {
 }
 
 .spotlight:hover::before {
-  opacity: 1;
-}
-
-.spotlight::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: radial-gradient(500px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.05), transparent 45%);
-  opacity: 0;
-  transition: opacity 300ms ease;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.spotlight:hover::after {
   opacity: 1;
 }
