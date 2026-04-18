@@ -41,6 +41,7 @@ export function Gallery() {
         scrollTrigger: {
           trigger: root.current,
           start: "top 70%",
+          toggleActions: "play reverse play reverse",
         },
         y: 80,
         x: (i) => (i % 2 === 0 ? -25 : 25),
