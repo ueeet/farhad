@@ -58,6 +58,9 @@ export function Calculator() {
   const [city, setCity] = useState(cities[0]);
   const [duration, setDuration] = useState(durations[1]);
   const [chosenExtras, setChosenExtras] = useState<string[]>([]);
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [touched, setTouched] = useState(false);
 
   const total = useMemo(() => {
     const guestSurcharge = Math.max(0, guests - 50) * 250;
