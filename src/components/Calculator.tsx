@@ -133,7 +133,12 @@ export function Calculator() {
 
   const guestPercent = ((guests - 10) / (500 - 10)) * 100;
 
-  const summary = `Здравствуйте, Фархад! Хочу обсудить:
+  const phoneDigits = phone.replace(/\D/g, "");
+  const phoneValid = phoneDigits.length >= 10;
+  const formValid = name.trim().length >= 2 && phoneValid;
+
+  const summary = `Здравствуйте, Фархад! Меня зовут ${name || "—"} (тел.: ${phone || "—"}).
+Хочу обсудить:
 — ${eventType.label}
 — Гостей: ${guests}
 — Город: ${city.label}
@@ -142,6 +147,8 @@ export function Calculator() {
 Расчёт по сайту: ${formatPrice(total)} ₽`;
 
   const waUrl = `https://wa.me/79600714686?text=${encodeURIComponent(summary)}`;
+
+  const freeDates = ["12 дек", "25 дек", "31 дек", "14 янв", "28 янв"];
 
   return (
     <section
