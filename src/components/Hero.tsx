@@ -54,12 +54,12 @@ export function Hero() {
 
       gsap.to(farhad, {
         xPercent: -130,
-        ease: "power2.in",
+        ease: "power3.out",
         scrollTrigger: {
           trigger: root.current,
           start: "top top",
-          end: "30% top",
-          scrub: 0.5,
+          end: "50% top",
+          scrub: 0.6,
         },
       });
 
