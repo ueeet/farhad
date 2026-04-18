@@ -167,7 +167,11 @@ export function Hero() {
         aria-hidden
         className="absolute inset-x-0 top-[13%] lg:top-[14%] z-[1] overflow-hidden pointer-events-none"
       >
-        <span ref={farhadRef} className="hero-title-farhad block font-display font-black leading-[0.82] tracking-[-0.05em] text-text text-[clamp(3.6rem,13.5vw,15.3rem)] text-left pl-[0.5%]">
+        <span
+          ref={farhadRef}
+          className="hero-title-farhad block font-display font-black leading-[0.82] tracking-[-0.05em] text-text text-[clamp(3.6rem,13.5vw,15.3rem)] text-left pl-[0.5%]"
+          style={{ transform: "translateX(-120%)" }}
+        >
           ФАРХАД
         </span>
       </div>
