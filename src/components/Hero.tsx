@@ -65,12 +65,12 @@ export function Hero() {
 
       gsap.to(ivanov, {
         xPercent: 130,
-        ease: "power2.in",
+        ease: "none",
         scrollTrigger: {
           trigger: root.current,
-          start: "25% top",
-          end: "85% top",
-          scrub: 1.1,
+          start: "top top",
+          end: "bottom top",
+          scrub: 0.6,
         },
       });
 
