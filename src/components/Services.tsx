@@ -130,7 +130,8 @@ export function Services() {
           >
             <div className="relative z-[2] flex flex-col h-full">
               <div className="flex items-start justify-end mb-10">
-                <span className="text-[10px] uppercase tracking-widest text-gold">
+                <span className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-gold">
+                  <span className="w-6 h-px bg-gold" />
                   Флагман
                 </span>
               </div>
