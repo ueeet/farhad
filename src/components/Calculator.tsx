@@ -310,34 +310,32 @@ export function Calculator() {
                   if (!formValid) return;
                   window.open(waUrl, "_blank", "noopener,noreferrer");
                 }}
-                className="mt-6 space-y-2"
+                className="mt-6 space-y-3"
               >
-                <div className="grid grid-cols-2 gap-2">
-                  <input
-                    type="text"
-                    placeholder="Имя"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    className={`w-full px-4 py-3 rounded-full bg-bg/40 border text-sm text-text placeholder:text-text-muted/70 outline-none transition-colors ${
-                      touched && name.trim().length < 2
-                        ? "border-red-500/60"
-                        : "border-line focus:border-gold/60"
-                    }`}
-                    autoComplete="given-name"
-                  />
-                  <input
-                    type="tel"
-                    placeholder="Телефон"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    className={`w-full px-4 py-3 rounded-full bg-bg/40 border text-sm text-text placeholder:text-text-muted/70 outline-none transition-colors tabular ${
-                      touched && !phoneValid
-                        ? "border-red-500/60"
-                        : "border-line focus:border-gold/60"
-                    }`}
-                    autoComplete="tel"
-                  />
-                </div>
+                <input
+                  type="text"
+                  placeholder="Имя"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className={`w-full px-5 py-3.5 rounded-full bg-bg/40 border text-sm text-text placeholder:text-text-muted/70 outline-none transition-colors ${
+                    touched && name.trim().length < 2
+                      ? "border-red-500/60"
+                      : "border-line focus:border-gold/60"
+                  }`}
+                  autoComplete="given-name"
+                />
+                <input
+                  type="tel"
+                  placeholder="Телефон"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  className={`w-full px-5 py-3.5 rounded-full bg-bg/40 border text-sm text-text placeholder:text-text-muted/70 outline-none transition-colors tabular ${
+                    touched && !phoneValid
+                      ? "border-red-500/60"
+                      : "border-line focus:border-gold/60"
+                  }`}
+                  autoComplete="tel"
+                />
 
                 <button
                   type="submit"
@@ -349,7 +347,7 @@ export function Calculator() {
                   </svg>
                 </button>
 
-                <p className="text-[10px] text-text-muted leading-relaxed pt-1">
+                <p className="text-xs text-text-muted leading-relaxed pt-1">
                   Открою WhatsApp с готовым сообщением. Отвечу в течение часа.
                   Нажимая, вы соглашаетесь с{" "}
                   <a href="/privacy" className="underline underline-offset-2 hover:text-gold">
