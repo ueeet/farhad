@@ -68,7 +68,7 @@ export function About() {
             </div>
             <h2 className="font-display font-black text-5xl lg:text-7xl leading-[0.9] tracking-[-0.04em] balance">
               <span className="about-line block">Не просто</span>
-              <span className="about-line block text-gradient-gold italic">ведущий.</span>
+              <span className="about-line block">ведущий.</span>
               <span className="about-line block">Соавтор</span>
               <span className="about-line block">вашего вечера.</span>
             </h2>
