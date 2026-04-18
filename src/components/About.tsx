@@ -39,6 +39,7 @@ export function About() {
         scrollTrigger: {
           trigger: root.current,
           start: "top 70%",
+          toggleActions: "play reverse play reverse",
         },
         y: 70,
         rotation: -2.5,
