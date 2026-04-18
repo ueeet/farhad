@@ -1,15 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #0a0a0a;
-  --bg-soft: #141414;
-  --bg-card: #171717;
-  --line: rgba(255, 255, 255, 0.09);
-  --text: #f2efe8;
-  --text-muted: #7c7974;
-  --gold: #f2efe8;
-  --gold-bright: #ffffff;
-  --gold-deep: #a8a49b;
+  --bg: hsl(38 6% 5%);
+  --bg-soft: hsl(38 6% 10%);
+  --bg-card: hsl(38 6% 14%);
+  --line: hsl(38 10% 100% / 0.09);
+  --text: hsl(40 20% 94%);
+  --text-body: hsl(40 12% 78%);
+  --text-muted: hsl(40 6% 52%);
+  --gold: hsl(38 58% 58%);
+  --gold-bright: hsl(38 72% 70%);
+  --gold-deep: hsl(38 48% 38%);
 }
 
 @theme inline {
@@ -18,6 +19,7 @@
   --color-bg-card: var(--bg-card);
   --color-line: var(--line);
   --color-text: var(--text);
+  --color-text-body: var(--text-body);
   --color-text-muted: var(--text-muted);
   --color-gold: var(--gold);
   --color-gold-bright: var(--gold-bright);
