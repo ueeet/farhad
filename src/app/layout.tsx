@@ -11,7 +11,7 @@ const inter = Inter({
 const unbounded = Unbounded({
   variable: "--font-unbounded",
   subsets: ["latin", "cyrillic"],
-  weight: ["400", "600", "700", "800", "900"],
+  weight: ["400", "700", "900"],
   display: "swap",
 });
 
