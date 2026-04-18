@@ -245,7 +245,7 @@ export function Calculator() {
                         )}
                       </span>
                       {e.label}
-                      <span className="text-[11px] text-text-muted">
+                      <span className="text-xs text-text-muted">
                         +{formatPrice(e.price)} ₽
                       </span>
                     </button>
