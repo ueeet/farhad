@@ -11,22 +11,22 @@ const facts = [
   {
     headline: "С президентом",
     sub: "Провёл мероприятие государственного уровня",
-    image: "/images/about/president.jpg",
+    image: "https://picsum.photos/id/1062/900/900",
   },
   {
     headline: "На ТВ",
     sub: "Веду новости в прямом эфире",
-    image: "/images/about/tv.jpg",
+    image: "https://picsum.photos/id/96/900/900",
   },
   {
     headline: "Первый канал",
     sub: "Выпускник Школы ведущих",
-    image: "/images/about/school.jpg",
+    image: "https://picsum.photos/id/1043/900/900",
   },
   {
     headline: "Два языка",
     sub: "Веду на русском и татарском",
-    image: "/images/about/languages.jpg",
+    image: "https://picsum.photos/id/823/900/900",
   },
 ];
 
