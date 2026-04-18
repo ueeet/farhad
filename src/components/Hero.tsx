@@ -122,7 +122,6 @@ export function Hero() {
 
       <div className="relative z-[10] mx-auto w-full max-w-[1600px] px-6 lg:px-12 hero-meta-top flex items-start justify-between gap-6 text-[11px] uppercase tracking-[0.3em] text-text-muted">
         <div className="flex items-center gap-3">
-          <span className="w-8 h-px bg-text-muted" />
           Ведущий мероприятий
         </div>
         <div className="text-right">
