@@ -53,7 +53,7 @@ export function Contact() {
           </span>
         </h2>
 
-        <p className="cta-line text-center text-text-muted text-lg max-w-xl mx-auto mt-8">
+        <p className="cta-line text-center text-text-body text-lg max-w-xl mx-auto mt-8">
           Ответ в течение часа. Бесплатно обсудим формат, дату и сценарные
           возможности.
         </p>
