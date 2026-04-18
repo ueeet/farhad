@@ -222,8 +222,8 @@ export function Hero() {
           </div>
           <div className="w-px h-8 bg-line self-center" />
           <div>
-            <div className="font-display font-black text-xl lg:text-2xl text-text tracking-tight leading-none">Первый</div>
-            <div className="mt-1">канал · Школа</div>
+            <div className="font-display font-black text-xl lg:text-2xl text-text tabular tracking-tight leading-none">2015</div>
+            <div className="mt-1">Школа Первого</div>
           </div>
         </div>
       </div>
