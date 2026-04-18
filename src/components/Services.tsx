@@ -84,7 +84,11 @@ export function Services() {
       });
 
       gsap.from(".service-card", {
-        scrollTrigger: { trigger: ".service-card", start: "top 85%" },
+        scrollTrigger: {
+          trigger: ".service-card",
+          start: "top 85%",
+          toggleActions: "play reverse play reverse",
+        },
         y: 100,
         rotation: (i) => (i % 2 === 0 ? -2.5 : 2.5),
         scale: 0.94,
