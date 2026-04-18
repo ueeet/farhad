@@ -35,9 +35,9 @@ export function Hero() {
       const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
 
       tl.from(".hero-meta-top > *", { y: 20, duration: 0.8, stagger: 0.1 })
-        .from(farhad, { xPercent: -120, duration: 1.4 }, "-=0.2")
-        .from(ivanov, { xPercent: 120, duration: 1.4 }, "<")
-        .from(person, { yPercent: 6, duration: 1.4, transformOrigin: "center bottom" }, "-=1.2")
+        .fromTo(farhad, { xPercent: -120 }, { xPercent: 0, duration: 1.4 }, "-=0.2")
+        .fromTo(ivanov, { xPercent: 120 }, { xPercent: 0, duration: 1.4 }, "<")
+        .fromTo(person, { yPercent: 6 }, { yPercent: 0, duration: 1.4, transformOrigin: "center bottom" }, "-=1.2")
         .from(".hero-bottom > *", { y: 40, duration: 0.9, stagger: 0.1 }, "-=0.8");
 
       gsap.to(bg, {
@@ -63,27 +63,37 @@ export function Hero() {
         },
       });
 
-      gsap.to(farhad, {
-        xPercent: -60,
-        ease: "none",
-        scrollTrigger: {
-          trigger: root.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: 0.6,
-        },
-      });
+      gsap.fromTo(
+        farhad,
+        { xPercent: 0 },
+        {
+          xPercent: -60,
+          ease: "none",
+          immediateRender: false,
+          scrollTrigger: {
+            trigger: root.current,
+            start: "top top",
+            end: "bottom top",
+            scrub: 0.6,
+          },
+        }
+      );
 
-      gsap.to(ivanov, {
-        xPercent: 60,
-        ease: "none",
-        scrollTrigger: {
-          trigger: root.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: 0.6,
-        },
-      });
+      gsap.fromTo(
+        ivanov,
+        { xPercent: 0 },
+        {
+          xPercent: 60,
+          ease: "none",
+          immediateRender: false,
+          scrollTrigger: {
+            trigger: root.current,
+            start: "top top",
+            end: "bottom top",
+            scrub: 0.6,
+          },
+        }
+      );
 
 
       const px = gsap.quickTo(person, "x", { duration: 1.1, ease: "expo.out" });
