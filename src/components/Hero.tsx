@@ -1,11 +1,13 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
+
+const roleWords = ["свадеб", "корпоративов", "ТВ-эфиров", "премий", "спецпроектов"];
 
 export function Hero() {
   const root = useRef<HTMLElement>(null);
@@ -13,6 +15,14 @@ export function Hero() {
   const personRef = useRef<HTMLDivElement>(null);
   const farhadRef = useRef<HTMLSpanElement>(null);
   const ivanovRef = useRef<HTMLSpanElement>(null);
+  const [roleIdx, setRoleIdx] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setRoleIdx((i) => (i + 1) % roleWords.length);
+    }, 2600);
+    return () => clearInterval(id);
+  }, []);
 
   useGSAP(
     () => {
