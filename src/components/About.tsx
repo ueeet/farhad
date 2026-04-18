@@ -91,6 +91,19 @@ export function About() {
         stagger: 0.12,
         ease: "expo.out",
       });
+
+      gsap.from(".process-step", {
+        scrollTrigger: {
+          trigger: ".process-block",
+          start: "top 80%",
+          toggleActions: "play reverse play reverse",
+        },
+        y: 60,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.1,
+        ease: "expo.out",
+      });
     },
     { scope: root }
   );
