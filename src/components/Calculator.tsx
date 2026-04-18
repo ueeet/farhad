@@ -135,7 +135,6 @@ export function Calculator() {
 — Гостей: ${guests}
 — Город: ${city.label}
 — Длительность: ${duration.label}
-— День: ${day.label}
 — Доп.: ${chosenExtras.length ? chosenExtras.map(id => extras.find(e=>e.id===id)?.label).join(", ") : "—"}
 Расчёт по сайту: ${formatPrice(total)} ₽`;
 
