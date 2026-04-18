@@ -320,12 +320,12 @@ function ChipGroup<T extends { id: string; label: string }>({
   onChange: (id: string) => void;
 }) {
   return (
-    <div className="flex flex-wrap gap-3">
+    <div className="flex flex-wrap gap-2">
       {items.map((it) => (
         <button
           key={it.id}
           onClick={() => onChange(it.id)}
-          className={`px-5 py-3 rounded-full border text-sm transition-all duration-300 ${
+          className={`px-4 py-2 rounded-full border text-sm transition-all duration-300 ${
             value === it.id
               ? "border-gold bg-gold/5 text-text"
               : "border-line text-text-muted hover:border-gold/40 hover:text-text"
