@@ -129,6 +129,61 @@ export function About() {
               500 человек. Работаю в смокинге и в свитере — главное, чтобы
               совпало с настроением вашего дня.
             </p>
+
+            <blockquote className="about-line border-l-2 border-gold pl-6 lg:pl-8 py-2 my-4">
+              <p className="font-display text-xl lg:text-2xl leading-snug text-text italic tracking-[-0.01em] balance">
+                «Хороший ведущий — не тот, кто хорошо говорит. А тот, после кого
+                гости весь год пересказывают вечер».
+              </p>
+              <footer className="mt-4 text-xs uppercase tracking-[0.25em] text-text-muted">
+                — Фархад Иванов
+              </footer>
+            </blockquote>
+
+            <p className="about-line text-base text-text-muted leading-relaxed pretty max-w-[65ch]">
+              Не работаю «потоком» — беру максимум 6 мероприятий в месяц, чтобы
+              у каждого был полноценный сценарий и личное внимание. Если дата
+              свободна — мы дойдём до неё в ритме без спешки.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-24 lg:mt-32 process-block">
+          <div className="flex items-end justify-between flex-wrap gap-6 mb-12 lg:mb-16">
+            <div>
+              <div className="text-xs uppercase tracking-[0.3em] text-gold mb-4">
+                / Процесс
+              </div>
+              <h3 className="font-display font-black text-3xl lg:text-5xl leading-[1.05] tracking-[-0.03em] balance max-w-2xl">
+                От первого звонка до последнего тоста
+              </h3>
+            </div>
+            <p className="text-text-muted max-w-sm text-sm">
+              Чёткие этапы без сюрпризов. Вы знаете, что и когда происходит —
+              никаких «потом расскажу».
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-px lg:bg-line">
+            {process.map((p) => (
+              <div
+                key={p.no}
+                className="process-step group relative p-7 lg:p-8 bg-bg lg:hover:bg-bg-soft transition-colors border border-line lg:border-0 rounded-2xl lg:rounded-none"
+              >
+                <div className="font-display font-black text-5xl lg:text-6xl text-gold/20 group-hover:text-gold/40 transition-colors tabular leading-none">
+                  {p.no}
+                </div>
+                <div className="mt-6 font-display font-bold text-xl lg:text-2xl text-text tracking-[-0.02em]">
+                  {p.title}
+                </div>
+                <div className="mt-1 text-[11px] uppercase tracking-[0.2em] text-gold">
+                  {p.duration}
+                </div>
+                <p className="mt-4 text-sm text-text-muted leading-relaxed pretty">
+                  {p.desc}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
 
