@@ -189,7 +189,7 @@ export function Services() {
                   {s.title}
                 </h3>
                 <p className="mt-2 text-sm text-gold italic">{s.sub}</p>
-                <p className="mt-5 text-sm text-text-muted leading-relaxed pretty">
+                <p className="mt-5 text-sm text-text-body leading-relaxed pretty">
                   {s.desc}
                 </p>
 
