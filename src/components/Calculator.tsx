@@ -149,23 +149,20 @@ export function Calculator() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gold/5 blur-[120px] pointer-events-none" />
 
       <div className="mx-auto max-w-[1400px] px-6 lg:px-12 relative">
-        <div className="flex items-end justify-between flex-wrap gap-6 mb-10 calc-anim">
-          <div>
-            <div className="text-xs uppercase tracking-[0.3em] text-gold mb-6">
-              / Смета
-            </div>
-            <h2 className="font-display font-black text-5xl lg:text-8xl leading-[1.05] tracking-[-0.04em] balance max-w-3xl pb-2">
-              Сколько стоит <span className="italic inline-block pr-[0.1em] pb-[0.18em] -mb-[0.18em]">ваш вечер</span>
-            </h2>
-          </div>
-          <p className="text-text-muted max-w-md text-sm">
-            Цены ориентировочные — финальная стоимость зависит от формата,
-            сложности сценария и подрядчиков. Точную смету пришлю в WhatsApp.
-          </p>
-        </div>
-
-        <div className="grid lg:grid-cols-12 gap-8">
+        <div className="grid lg:grid-cols-12 gap-8 lg:items-start">
           <div className="lg:col-span-8 space-y-6 calc-anim">
+            <div className="mb-4">
+              <div className="text-xs uppercase tracking-[0.3em] text-gold mb-6">
+                / Смета
+              </div>
+              <h2 className="font-display font-black text-5xl lg:text-8xl leading-[1.05] tracking-[-0.04em] balance max-w-3xl pb-2">
+                Сколько стоит <span className="italic inline-block pr-[0.1em] pb-[0.18em] -mb-[0.18em]">ваш вечер</span>
+              </h2>
+              <p className="text-text-muted max-w-md text-sm mt-6">
+                Цены ориентировочные — финальная стоимость зависит от формата,
+                сложности сценария и подрядчиков. Точную смету пришлю в WhatsApp.
+              </p>
+            </div>
             <Block label="Тип мероприятия">
               <ChipGroup
                 items={eventTypes}
