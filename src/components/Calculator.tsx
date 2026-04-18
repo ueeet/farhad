@@ -302,7 +302,7 @@ export function Calculator() {
 function Block({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div>
-      <div className="mb-4 text-sm text-text-muted uppercase tracking-wider">
+      <div className="mb-3 text-[11px] text-text-muted uppercase tracking-[0.2em]">
         {label}
       </div>
       {children}
