@@ -89,22 +89,17 @@ export function About() {
               совпало с настроением вашего дня.
             </p>
 
-            <div className="facts-grid grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
-              {facts.map((f) => (
-                <div
-                  key={f.text}
-                  className="fact-card group relative flex items-start gap-4 p-5 rounded-2xl border border-line bg-bg-card/40 hover:border-gold/60 hover:bg-bg-card transition-all"
-                >
-                  <span className="shrink-0 w-11 h-11 rounded-xl border border-gold/30 flex items-center justify-center text-gold group-hover:bg-gold/10 group-hover:border-gold/70 transition-colors">
-                    {f.icon}
-                  </span>
-                  <div className="flex-1 min-w-0">
-                    <div className="text-[10px] uppercase tracking-[0.25em] text-gold/70 mb-1.5">
-                      {f.tag}
-                    </div>
-                    <div className="text-sm lg:text-[15px] text-text leading-snug">
-                      {f.text}
-                    </div>
+            <div className="facts-grid grid grid-cols-2 gap-x-8 gap-y-10 pt-10 mt-2 border-t border-line">
+              {facts.map((f, i) => (
+                <div key={f.headline} className="fact-card">
+                  <div className="font-display text-[11px] tabular text-text-muted mb-3 tracking-[0.2em]">
+                    / 0{i + 1}
+                  </div>
+                  <div className="font-display font-black text-2xl lg:text-3xl text-text leading-[1.05] tracking-[-0.02em] mb-2 balance">
+                    {f.headline}
+                  </div>
+                  <div className="text-sm text-text-muted leading-relaxed pretty">
+                    {f.sub}
                   </div>
                 </div>
               ))}
