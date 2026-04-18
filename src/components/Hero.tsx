@@ -176,7 +176,12 @@ export function Hero() {
         </span>
       </div>
 
-      <div ref={personRef} className="hero-person z-[2]" aria-hidden>
+      <div
+        ref={personRef}
+        className="hero-person z-[2]"
+        aria-hidden
+        style={{ transform: "translateY(6%)" }}
+      >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/images/hero-person.png"
