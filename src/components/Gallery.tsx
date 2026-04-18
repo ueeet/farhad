@@ -95,7 +95,7 @@ export function Gallery() {
                 it.h === "tall" ? "aspect-[3/4]" : "aspect-square"
               }`}
             >
-              <div className="absolute inset-0 flex items-center justify-center text-text-muted text-[10px] uppercase tracking-widest opacity-50">
+              <div className="absolute inset-0 flex items-center justify-center text-text-muted text-xs uppercase tracking-widest opacity-50">
                 фото {String(i + 1).padStart(2, "0")}
               </div>
 
