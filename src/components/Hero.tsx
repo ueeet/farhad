@@ -63,27 +63,6 @@ export function Hero() {
         },
       });
 
-      gsap.to(farhad, {
-        xPercent: -25,
-        ease: "none",
-        scrollTrigger: {
-          trigger: root.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: 0.6,
-        },
-      });
-
-      gsap.to(ivanov, {
-        xPercent: 25,
-        ease: "none",
-        scrollTrigger: {
-          trigger: root.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: 0.6,
-        },
-      });
 
       const px = gsap.quickTo(person, "x", { duration: 1.1, ease: "expo.out" });
       const bx = gsap.quickTo(bg, "x", { duration: 1.4, ease: "expo.out" });
