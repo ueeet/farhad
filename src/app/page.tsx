@@ -16,7 +16,6 @@ export default function Home() {
       <Services />
       <Showreel />
       <Gallery />
-      <Testimonials />
       <About />
       <Calculator />
       <Faq />
