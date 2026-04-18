@@ -91,17 +91,38 @@ export function About() {
           {facts.map((f, i) => (
             <div
               key={f.headline}
-              className="fact-card group relative aspect-square flex flex-col justify-between p-6 lg:p-8 rounded-2xl border border-line bg-bg-card/40 hover:border-gold/50 hover:bg-bg-card transition-colors"
+              className="fact-card group relative aspect-square overflow-hidden rounded-2xl border border-line bg-bg-card"
             >
-              <div className="font-display text-[11px] tabular text-gold/80 tracking-[0.2em]">
-                / 0{i + 1}
-              </div>
-              <div>
-                <div className="font-display font-black text-2xl lg:text-3xl text-text leading-[1.05] tracking-[-0.02em] mb-3 balance">
-                  {f.headline}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={f.image}
+                alt=""
+                className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-700 ease-out"
+                loading="lazy"
+                draggable={false}
+              />
+              <div
+                aria-hidden
+                className="absolute inset-0 bg-gradient-to-t from-bg via-bg/70 to-bg/10"
+              />
+              <div
+                aria-hidden
+                className="absolute inset-0 ring-1 ring-inset ring-white/0 group-hover:ring-gold/40 transition-colors"
+              />
+
+              <div className="relative z-[1] h-full flex flex-col justify-between p-6 lg:p-7">
+                <div className="flex items-center justify-between">
+                  <div className="font-display text-[11px] tabular text-gold tracking-[0.2em]">
+                    / 0{i + 1}
+                  </div>
                 </div>
-                <div className="text-xs lg:text-sm text-text-muted leading-relaxed pretty">
-                  {f.sub}
+                <div>
+                  <div className="font-display font-black text-2xl lg:text-3xl text-text leading-[1.05] tracking-[-0.02em] mb-2 balance drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]">
+                    {f.headline}
+                  </div>
+                  <div className="text-xs lg:text-sm text-text-muted leading-relaxed pretty">
+                    {f.sub}
+                  </div>
                 </div>
               </div>
             </div>
