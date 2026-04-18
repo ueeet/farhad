@@ -153,7 +153,7 @@ export function About() {
               </footer>
             </blockquote>
 
-            <p className="about-line text-base text-text-muted leading-relaxed pretty max-w-[65ch]">
+            <p className="about-line text-base text-text-body leading-relaxed pretty max-w-[65ch]">
               Не работаю «потоком» — беру максимум 6 мероприятий в месяц, чтобы
               у каждого был полноценный сценарий и личное внимание. Если дата
               свободна — мы дойдём до неё в ритме без спешки.
