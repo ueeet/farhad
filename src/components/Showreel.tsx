@@ -69,40 +69,35 @@ export function Showreel() {
         </div>
 
         <div className="sr-anim relative aspect-video rounded-3xl overflow-hidden border border-line placeholder-card group">
-          {!playing ? (
-            <button
-              onClick={() => setPlaying(true)}
-              className="absolute inset-0 flex items-center justify-center w-full h-full"
-              aria-label="Смотреть шоурил"
-            >
+          {hasVideo ? (
+            <iframe
+              src={showreelUrl}
+              title="Шоурил Фархада Иванова"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            />
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60" />
 
               <div className="relative z-[2] flex flex-col items-center gap-6">
-                <span className="w-24 h-24 lg:w-32 lg:h-32 rounded-full border border-gold/60 flex items-center justify-center group-hover:scale-110 group-hover:border-gold transition-all duration-500 backdrop-blur-sm bg-bg/30">
-                  <span className="w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-gold flex items-center justify-center text-bg">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M6 3l14 9-14 9V3z" />
+                <span className="w-24 h-24 lg:w-32 lg:h-32 rounded-full border border-gold/60 flex items-center justify-center backdrop-blur-sm bg-bg/30">
+                  <span className="w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center text-gold">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                      <path d="M12 8v4l3 2" /><circle cx="12" cy="12" r="9" />
                     </svg>
                   </span>
                 </span>
                 <div className="text-center">
-                  <div className="font-display font-black text-2xl lg:text-3xl">Смотреть шоурил</div>
-                  <div className="mt-2 text-xs uppercase tracking-[0.3em] text-text-muted">2:38 · 2025</div>
+                  <div className="font-display font-black text-2xl lg:text-3xl">Шоурил скоро</div>
+                  <div className="mt-2 text-xs uppercase tracking-[0.3em] text-gold">Монтаж · 2026</div>
                 </div>
               </div>
 
               <div className="absolute top-4 left-4 right-4 flex items-center justify-between text-xs uppercase tracking-[0.25em] text-text-muted z-[2]">
                 <span>REC · 01</span>
                 <span className="tabular">HD · 1920×1080</span>
-              </div>
-            </button>
-          ) : (
-            <div className="absolute inset-0 flex items-center justify-center text-text-muted text-sm">
-              <div className="text-center">
-                <div className="font-display text-base">Видео не подключено</div>
-                <div className="mt-2 text-xs uppercase tracking-widest">
-                  Положите ссылку на YouTube/Vimeo в Showreel.tsx
-                </div>
               </div>
             </div>
           )}
