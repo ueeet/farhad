@@ -149,7 +149,7 @@ export function Calculator() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gold/5 blur-[120px] pointer-events-none" />
 
       <div className="mx-auto max-w-[1400px] px-6 lg:px-12 relative">
-        <div className="grid lg:grid-cols-12 gap-8 lg:items-start">
+        <div className="grid lg:grid-cols-12 gap-8">
           <div className="lg:col-span-8 space-y-6 calc-anim">
             <div className="mb-4">
               <div className="text-xs uppercase tracking-[0.3em] text-gold mb-6">
