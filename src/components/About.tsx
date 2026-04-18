@@ -189,7 +189,7 @@ export function About() {
                 <div className="mt-6 font-display font-bold text-xl lg:text-2xl text-text tracking-[-0.02em]">
                   {p.title}
                 </div>
-                <div className="mt-1 text-[11px] uppercase tracking-[0.2em] text-gold">
+                <div className="mt-1 text-xs uppercase tracking-[0.2em] text-gold">
                   {p.duration}
                 </div>
                 <p className="mt-4 text-sm text-text-muted leading-relaxed pretty">
