@@ -270,7 +270,6 @@ export function Calculator() {
                 <Row k="Гостей" v={String(guests)} />
                 <Row k="Город" v={city.label} />
                 <Row k="Длительность" v={duration.label} />
-                <Row k="День" v={day.label} />
                 {chosenExtras.length > 0 && (
                   <Row
                     k="Доп."
