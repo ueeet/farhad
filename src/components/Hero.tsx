@@ -37,7 +37,7 @@ export function Hero() {
       tl.from(".hero-meta-top > *", { y: 20, duration: 0.8, stagger: 0.1 })
         .from(farhad, { xPercent: -120, duration: 1.4 }, "-=0.2")
         .from(ivanov, { xPercent: 120, duration: 1.4 }, "<")
-        .from(person, { yPercent: 30, duration: 1.4, transformOrigin: "center bottom" }, "-=1.2")
+        .from(person, { yPercent: 6, duration: 1.4, transformOrigin: "center bottom" }, "-=1.2")
         .from(".hero-bottom > *", { y: 40, duration: 0.9, stagger: 0.1 }, "-=0.8");
 
       gsap.to(bg, {
