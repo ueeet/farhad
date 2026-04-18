@@ -86,17 +86,6 @@ export function About() {
         ease: "power2.out",
       });
 
-      gsap.from(".fact-card", {
-        scrollTrigger: {
-          trigger: ".facts-grid",
-          start: "top 85%",
-        },
-        y: 24,
-        opacity: 0,
-        duration: 0.7,
-        stagger: 0.08,
-        ease: "power2.out",
-      });
     },
     { scope: root }
   );
