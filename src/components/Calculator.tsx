@@ -99,13 +99,24 @@ export function Calculator() {
 
   useGSAP(
     () => {
+      gsap.from(root.current!.querySelector("h2"), {
+        scrollTrigger: { trigger: root.current, start: "top 80%" },
+        y: 90,
+        rotation: -3,
+        opacity: 0,
+        transformOrigin: "left bottom",
+        duration: 1.3,
+        ease: "expo.out",
+      });
+
       gsap.from(".calc-anim", {
         scrollTrigger: { trigger: root.current, start: "top 70%" },
-        y: 40,
+        y: 60,
+        x: (i) => (i === 0 ? 0 : i === 2 ? 40 : -40),
         opacity: 0,
-        duration: 0.9,
-        stagger: 0.1,
-        ease: "power3.out",
+        duration: 1.1,
+        stagger: 0.15,
+        ease: "expo.out",
       });
     },
     { scope: root }
