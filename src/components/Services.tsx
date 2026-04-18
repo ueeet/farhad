@@ -129,9 +129,7 @@ export function Services() {
             className="service-card spotlight group lg:col-span-7 lg:row-span-2 relative p-8 lg:p-12 rounded-3xl bg-bg-card border border-line overflow-hidden"
           >
             <div className="relative z-[2] flex flex-col h-full">
-              <div className="flex items-start justify-between mb-10">
-                <span className="font-display text-xs text-text-muted">
-                  {hero.no}                </span>
+              <div className="flex items-start justify-end mb-10">
                 <span className="text-[10px] uppercase tracking-widest text-gold">
                   Флагман
                 </span>
