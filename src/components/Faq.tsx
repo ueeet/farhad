@@ -44,13 +44,24 @@ export function Faq() {
 
   useGSAP(
     () => {
+      gsap.from(root.current!.querySelector("h2"), {
+        scrollTrigger: { trigger: root.current, start: "top 80%" },
+        y: 80,
+        rotation: -2.5,
+        opacity: 0,
+        transformOrigin: "left bottom",
+        duration: 1.3,
+        ease: "expo.out",
+      });
+
       gsap.from(".faq-anim", {
         scrollTrigger: { trigger: root.current, start: "top 75%" },
-        y: 40,
+        y: 60,
+        rotation: (i) => (i === 0 ? 0 : i % 2 === 1 ? -1.5 : 1.5),
         opacity: 0,
-        duration: 0.8,
-        stagger: 0.06,
-        ease: "power3.out",
+        duration: 1,
+        stagger: 0.08,
+        ease: "expo.out",
       });
     },
     { scope: root }
