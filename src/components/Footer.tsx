@@ -63,15 +63,26 @@ export function Footer() {
               <a href="/privacy" className="text-text-muted hover:text-gold transition-colors">
                 Политика конфиденциальности
               </a>
-              <a href="/offer" className="text-text-muted hover:text-gold transition-colors">
-                Публичная оферта
-              </a>
             </div>
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 text-xs text-text-muted">
-          <div>© {new Date().getFullYear()} Фархад Иванов. Все права защищены.</div>
+        <div className="mt-12 pt-8 border-t border-line text-[11px] text-text-muted leading-relaxed space-y-3">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
+            <div>
+              Иванов Фархад [—] · Самозанятый (НПД) · ИНН [—] · Казань, РФ
+            </div>
+            <div>© {new Date().getFullYear()} Все права защищены.</div>
+          </div>
+          <div className="max-w-3xl">
+            Информация на сайте носит справочный характер и не является
+            публичной офертой. Финальная стоимость и условия согласовываются
+            индивидуально. Используя сайт, вы соглашаетесь с{" "}
+            <a href="/privacy" className="underline underline-offset-2 hover:text-gold">
+              политикой конфиденциальности
+            </a>
+            .
+          </div>
         </div>
       </div>
     </footer>
