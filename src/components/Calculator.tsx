@@ -57,7 +57,6 @@ export function Calculator() {
   const [guests, setGuests] = useState(80);
   const [city, setCity] = useState(cities[0]);
   const [duration, setDuration] = useState(durations[1]);
-  const [day, setDay] = useState(days[1]);
   const [chosenExtras, setChosenExtras] = useState<string[]>([]);
 
   const total = useMemo(() => {
@@ -67,10 +66,9 @@ export function Calculator() {
       0
     );
     const sub = (eventType.base + guestSurcharge + city.price + extrasSum) *
-      duration.mult *
-      day.mult;
+      duration.mult;
     return Math.max(20000, sub);
-  }, [eventType, guests, city, duration, day, chosenExtras]);
+  }, [eventType, guests, city, duration, chosenExtras]);
 
   const prevTotal = useRef(total);
   useEffect(() => {
