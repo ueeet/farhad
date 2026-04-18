@@ -168,7 +168,7 @@ export function Calculator() {
               <h2 className="font-display font-black text-5xl lg:text-8xl leading-[1.05] tracking-[-0.04em] balance max-w-3xl pb-2">
                 Сколько стоит <span className="italic inline-block pr-[0.1em] pb-[0.18em] -mb-[0.18em]">ваш вечер</span>
               </h2>
-              <p className="text-text-muted max-w-md text-sm mt-6">
+              <p className="text-text-body max-w-md text-sm mt-6">
                 Цены ориентировочные — финальная стоимость зависит от формата,
                 сложности сценария и подрядчиков. Точную смету пришлю в WhatsApp.
                 Расчёт не является публичной офертой.
