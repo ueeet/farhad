@@ -268,7 +268,7 @@ export function Calculator() {
                 {formatPrice(total)} ₽
               </div>
 
-              <p className="text-sm text-text-muted mt-6 leading-relaxed max-w-xs">
+              <p className="text-sm text-text-body mt-6 leading-relaxed max-w-xs">
                 Примерный расчёт для выбранных параметров. Точную смету пришлю
                 после короткого брифа.
               </p>
