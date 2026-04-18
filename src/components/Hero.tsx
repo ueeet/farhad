@@ -196,18 +196,22 @@ export function Hero() {
       <div className="relative z-[10] mx-auto w-full max-w-[1600px] px-6 lg:px-12 pb-4 lg:pb-6 hero-bottom flex flex-col lg:flex-row lg:items-end justify-between gap-6">
         <a
           href="#calc"
-          className="inline-flex items-center gap-4 px-5 py-3 rounded-full border border-text/30 backdrop-blur-sm bg-bg/30 hover:border-text hover:bg-bg/50 transition-all duration-300 group w-fit"
+          className="inline-flex items-stretch rounded-full overflow-hidden bg-bg/40 backdrop-blur-sm border border-text/30 hover:border-text/70 transition-all duration-300 group w-fit"
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
-          <span className="text-xs uppercase tracking-[0.2em] text-text">Обсудить дату</span>
-          <span className="w-6 h-6 rounded-full border border-text/40 flex items-center justify-center group-hover:rotate-45 group-hover:border-text transition-all">
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="none">
+          <span className="flex items-center gap-2 pl-5 pr-4 py-3">
+            <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
+            <span className="text-xs uppercase tracking-[0.2em] text-text">Обсудить дату</span>
+          </span>
+          <span className="flex items-center gap-2 px-4 py-3 border-l border-text/20 bg-text/5">
+            <span className="text-[10px] uppercase tracking-[0.2em] text-text-muted">от</span>
+            <span className="font-display font-black text-text tabular text-sm">80 000&nbsp;₽</span>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" className="ml-1 group-hover:translate-x-0.5 transition-transform">
               <path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
             </svg>
           </span>
         </a>
 
-        <div className="flex items-end gap-x-6 lg:gap-x-10 text-[10px] lg:text-[11px] text-text-muted uppercase tracking-[0.18em]">
+        <div className="flex items-end gap-x-4 sm:gap-x-6 lg:gap-x-10 text-[10px] lg:text-[11px] text-text-muted uppercase tracking-[0.18em]">
           <div>
             <div className="font-display font-black text-xl lg:text-2xl text-text tabular tracking-tight leading-none">500+</div>
             <div className="mt-1">мероприятий</div>
@@ -217,8 +221,8 @@ export function Hero() {
             <div className="font-display font-black text-xl lg:text-2xl text-text tabular tracking-tight leading-none">13.7K</div>
             <div className="mt-1">подписчиков</div>
           </div>
-          <div className="hidden sm:block w-px h-8 bg-line self-center" />
-          <div className="hidden sm:block">
+          <div className="w-px h-8 bg-line self-center" />
+          <div>
             <div className="font-display font-black text-xl lg:text-2xl text-text tracking-tight leading-none">Первый</div>
             <div className="mt-1">канал · Школа</div>
           </div>
