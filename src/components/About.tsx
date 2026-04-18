@@ -192,7 +192,7 @@ export function About() {
                 <div className="mt-1 text-xs uppercase tracking-[0.2em] text-gold">
                   {p.duration}
                 </div>
-                <p className="mt-4 text-sm text-text-muted leading-relaxed pretty">
+                <p className="mt-4 text-sm text-text-body leading-relaxed pretty">
                   {p.desc}
                 </p>
               </div>
