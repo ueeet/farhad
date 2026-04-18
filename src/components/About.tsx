@@ -51,7 +51,11 @@ export function About() {
       });
 
       gsap.from(".fact-card", {
-        scrollTrigger: { trigger: ".facts-grid", start: "top 85%" },
+        scrollTrigger: {
+          trigger: ".facts-grid",
+          start: "top 85%",
+          toggleActions: "play reverse play reverse",
+        },
         y: 90,
         rotation: (i) => (i % 2 === 0 ? -3 : 3),
         scale: 0.9,
