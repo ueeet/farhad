@@ -50,8 +50,8 @@ export function Gallery() {
             <div className="text-xs uppercase tracking-[0.3em] text-gold mb-6">
               / Работы
             </div>
-            <h2 className="font-display font-black text-5xl lg:text-8xl leading-[0.9] tracking-[-0.04em] balance">
-              <span className="text-gradient-gold italic">Кадры</span> с площадки
+            <h2 className="font-display font-black text-5xl lg:text-8xl leading-[1.05] tracking-[-0.04em] balance pb-2">
+              <span className="text-gradient-gold italic inline-block pr-[0.1em]">Кадры</span> с площадки
             </h2>
           </div>
           <a
