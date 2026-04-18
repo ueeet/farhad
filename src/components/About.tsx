@@ -40,11 +40,24 @@ export function About() {
           trigger: root.current,
           start: "top 70%",
         },
-        y: 40,
+        y: 70,
+        rotation: -2.5,
         opacity: 0,
-        duration: 0.9,
-        stagger: 0.08,
-        ease: "power3.out",
+        transformOrigin: "left bottom",
+        duration: 1.1,
+        stagger: 0.1,
+        ease: "expo.out",
+      });
+
+      gsap.from(".fact-card", {
+        scrollTrigger: { trigger: ".facts-grid", start: "top 85%" },
+        y: 90,
+        rotation: (i) => (i % 2 === 0 ? -3 : 3),
+        scale: 0.9,
+        opacity: 0,
+        duration: 1.2,
+        stagger: 0.12,
+        ease: "expo.out",
       });
     },
     { scope: root }
