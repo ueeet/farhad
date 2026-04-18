@@ -149,7 +149,7 @@ export function Faq() {
                   >
                     <div className="overflow-hidden">
                       <div className="px-6 lg:px-7 pb-6 lg:pb-7 pl-[3.5rem] lg:pl-[3.75rem]">
-                        <p className="text-sm lg:text-base text-text-muted leading-relaxed pretty">
+                        <p className="text-sm lg:text-base text-text-body leading-relaxed pretty">
                           {it.a}
                         </p>
                       </div>
