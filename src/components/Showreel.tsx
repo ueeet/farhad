@@ -89,7 +89,7 @@ export function Showreel() {
                 </div>
               </div>
 
-              <div className="absolute top-4 left-4 right-4 flex items-center justify-between text-[10px] uppercase tracking-[0.25em] text-text-muted z-[2]">
+              <div className="absolute top-4 left-4 right-4 flex items-center justify-between text-xs uppercase tracking-[0.25em] text-text-muted z-[2]">
                 <span>REC · 01</span>
                 <span className="tabular">HD · 1920×1080</span>
               </div>
