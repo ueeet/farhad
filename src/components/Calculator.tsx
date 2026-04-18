@@ -317,10 +317,10 @@ export function Calculator() {
                   placeholder="Имя"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className={`w-full px-5 py-3.5 rounded-full bg-bg/40 border text-sm text-text placeholder:text-text-muted/70 outline-none transition-colors ${
+                  className={`w-full px-5 py-3.5 rounded-full bg-bg/40 border text-sm text-text placeholder:text-text-muted/70 outline-none transition-all focus:ring-2 focus:ring-gold/25 ${
                     touched && name.trim().length < 2
-                      ? "border-red-500/60"
-                      : "border-line focus:border-gold/60"
+                      ? "border-red-500/60 focus:ring-red-500/25"
+                      : "border-line focus:border-gold"
                   }`}
                   autoComplete="given-name"
                 />
@@ -329,10 +329,10 @@ export function Calculator() {
                   placeholder="Телефон"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  className={`w-full px-5 py-3.5 rounded-full bg-bg/40 border text-sm text-text placeholder:text-text-muted/70 outline-none transition-colors tabular ${
+                  className={`w-full px-5 py-3.5 rounded-full bg-bg/40 border text-sm text-text placeholder:text-text-muted/70 outline-none transition-all tabular focus:ring-2 focus:ring-gold/25 ${
                     touched && !phoneValid
-                      ? "border-red-500/60"
-                      : "border-line focus:border-gold/60"
+                      ? "border-red-500/60 focus:ring-red-500/25"
+                      : "border-line focus:border-gold"
                   }`}
                   autoComplete="tel"
                 />
