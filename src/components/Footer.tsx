@@ -67,7 +67,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-line text-[11px] text-text-muted leading-relaxed space-y-3">
+        <div className="mt-12 pt-8 border-t border-line text-xs text-text-muted leading-relaxed space-y-3">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
             <div>
               Иванов Фархад [—] · Самозанятый (НПД) · ИНН [—] · Казань, РФ
