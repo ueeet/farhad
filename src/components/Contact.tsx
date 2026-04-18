@@ -48,7 +48,7 @@ export function Contact() {
 
         <h2 className="text-center font-display font-black text-5xl lg:text-8xl leading-[1.05] tracking-tight pb-2">
           <span className="cta-line block">Расскажите</span>
-          <span className="cta-line block text-gradient-gold italic px-[0.1em]">
+          <span className="cta-line block text-gold italic px-[0.1em]">
             о своём вечере
           </span>
         </h2>
