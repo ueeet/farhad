@@ -248,15 +248,15 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .shimmer {
-  background: linear-gradient(90deg, transparent, rgba(212, 168, 87, 0.15), transparent);
+  background: linear-gradient(90deg, transparent, hsl(38 58% 58% / 0.18), transparent);
   background-size: 200% 100%;
   animation: shimmer 3s linear infinite;
 }
 
 .placeholder-card {
   background:
-    radial-gradient(ellipse at top, rgba(255, 255, 255, 0.04), transparent 60%),
-    linear-gradient(180deg, #1d1d1d 0%, #0a0a0a 100%);
+    radial-gradient(ellipse at top, hsl(38 30% 50% / 0.08), transparent 60%),
+    linear-gradient(180deg, var(--bg-card) 0%, var(--bg) 100%);
   border: 1px solid var(--line);
 }
 
