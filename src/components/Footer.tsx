@@ -72,10 +72,6 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 text-xs text-text-muted">
           <div>© {new Date().getFullYear()} Фархад Иванов. Все права защищены.</div>
-          <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
-            <span>Открыт к новым датам</span>
-          </div>
         </div>
       </div>
     </footer>
