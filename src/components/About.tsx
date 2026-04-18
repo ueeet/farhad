@@ -8,10 +8,26 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 const facts = [
-  { headline: "С президентом", sub: "Провёл мероприятие государственного уровня" },
-  { headline: "На ТВ", sub: "Веду новости в прямом эфире" },
-  { headline: "Первый канал", sub: "Выпускник Школы ведущих" },
-  { headline: "Два языка", sub: "Веду на русском и татарском" },
+  {
+    headline: "С президентом",
+    sub: "Провёл мероприятие государственного уровня",
+    image: "/images/about/president.jpg",
+  },
+  {
+    headline: "На ТВ",
+    sub: "Веду новости в прямом эфире",
+    image: "/images/about/tv.jpg",
+  },
+  {
+    headline: "Первый канал",
+    sub: "Выпускник Школы ведущих",
+    image: "/images/about/school.jpg",
+  },
+  {
+    headline: "Два языка",
+    sub: "Веду на русском и татарском",
+    image: "/images/about/languages.jpg",
+  },
 ];
 
 export function About() {
