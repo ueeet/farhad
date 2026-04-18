@@ -15,10 +15,46 @@ const stats = [
 ];
 
 const facts = [
-  "Провёл мероприятие с президентом",
-  "Веду новости на ТВ",
-  "Выпускник Школы Первого канала",
-  "Работаю на двух языках",
+  {
+    tag: "Госуровень",
+    text: "Провёл мероприятие с президентом",
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <path d="M3 17l3-9 4 5 2-7 2 7 4-5 3 9H3z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round"/>
+        <path d="M5 20h14" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/>
+      </svg>
+    ),
+  },
+  {
+    tag: "Телевидение",
+    text: "Веду новости на ТВ",
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <rect x="3" y="6" width="18" height="13" rx="2" stroke="currentColor" strokeWidth="1.6"/>
+        <path d="M8 3l4 3 4-3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
+  },
+  {
+    tag: "Образование",
+    text: "Выпускник Школы Первого канала",
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <path d="M2 9l10-5 10 5-10 5L2 9z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round"/>
+        <path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/>
+      </svg>
+    ),
+  },
+  {
+    tag: "Языки",
+    text: "Работаю на двух языках",
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.6"/>
+        <path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18" stroke="currentColor" strokeWidth="1.6"/>
+      </svg>
+    ),
+  },
 ];
 
 export function About() {
