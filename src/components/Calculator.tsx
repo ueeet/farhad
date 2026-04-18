@@ -193,7 +193,7 @@ export function Calculator() {
                 style={{ "--val": `${guestPercent}%` } as React.CSSProperties}
                 className="w-full"
               />
-              <div className="flex justify-between text-[11px] text-text-muted mt-2">
+              <div className="flex justify-between text-xs text-text-muted mt-2">
                 <span>10</span>
                 <span>100</span>
                 <span>250</span>
