@@ -144,7 +144,7 @@ export function Calculator() {
     <section
       ref={root}
       id="calc"
-      className="relative py-32 lg:py-40 border-t border-line bg-bg-soft bg-noise"
+      className="relative py-24 lg:py-32 border-t border-line bg-bg-soft bg-noise"
     >
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gold/5 blur-[120px] pointer-events-none" />
 
