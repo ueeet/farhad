@@ -7,13 +7,6 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const stats = [
-  { value: "500+", label: "Проведённых вечеров" },
-  { value: "13.7K", label: "Подписчиков в Instagram" },
-  { value: "5+", label: "Лет в профессии" },
-  { value: "10/10", label: "Средняя оценка пар" },
-];
-
 const facts = [
   { headline: "С президентом", sub: "Провёл мероприятие государственного уровня" },
   { headline: "На ТВ", sub: "Веду новости в прямом эфире" },
@@ -37,19 +30,6 @@ export function About() {
         stagger: 0.08,
         ease: "power3.out",
       });
-
-      gsap.from(".stat-block", {
-        scrollTrigger: {
-          trigger: ".stats-grid",
-          start: "top 80%",
-        },
-        y: 30,
-        opacity: 0,
-        duration: 0.7,
-        stagger: 0.1,
-        ease: "power2.out",
-      });
-
     },
     { scope: root }
   );
@@ -88,36 +68,20 @@ export function About() {
               500 человек. Работаю в смокинге и в свитере — главное, чтобы
               совпало с настроением вашего дня.
             </p>
-
-            <div className="facts-grid grid grid-cols-2 gap-x-8 gap-y-10 pt-10 mt-2 border-t border-line">
-              {facts.map((f, i) => (
-                <div key={f.headline} className="fact-card">
-                  <div className="font-display text-[11px] tabular text-text-muted mb-3 tracking-[0.2em]">
-                    / 0{i + 1}
-                  </div>
-                  <div className="font-display font-black text-2xl lg:text-3xl text-text leading-[1.05] tracking-[-0.02em] mb-2 balance">
-                    {f.headline}
-                  </div>
-                  <div className="text-sm text-text-muted leading-relaxed pretty">
-                    {f.sub}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
 
-        <div className="stats-grid mt-24 grid grid-cols-2 lg:grid-cols-4 gap-px bg-line">
-          {stats.map((s) => (
-            <div
-              key={s.label}
-              className="stat-block bg-bg p-8 lg:p-10 group hover:bg-bg-soft transition-colors"
-            >
-              <div className="font-display font-black text-4xl lg:text-6xl text-gradient-gold tabular">
-                {s.value}
+        <div className="facts-grid mt-20 lg:mt-28 pt-12 lg:pt-16 border-t border-line grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          {facts.map((f, i) => (
+            <div key={f.headline} className="fact-card">
+              <div className="font-display text-[11px] tabular text-text-muted mb-4 tracking-[0.2em]">
+                / 0{i + 1}
               </div>
-              <div className="mt-4 text-xs lg:text-sm text-text-muted uppercase tracking-wider">
-                {s.label}
+              <div className="font-display font-black text-2xl lg:text-4xl text-text leading-[1.05] tracking-[-0.02em] mb-3 balance">
+                {f.headline}
+              </div>
+              <div className="text-sm lg:text-base text-text-muted leading-relaxed pretty">
+                {f.sub}
               </div>
             </div>
           ))}
