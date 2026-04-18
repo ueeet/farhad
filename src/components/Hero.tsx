@@ -20,7 +20,7 @@ export function Hero() {
   useEffect(() => {
     const id = setInterval(() => {
       setRoleIdx((i) => (i + 1) % roleWords.length);
-    }, 2600);
+    }, 1900);
     return () => clearInterval(id);
   }, []);
 
