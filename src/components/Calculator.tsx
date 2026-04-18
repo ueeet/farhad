@@ -244,7 +244,7 @@ export function Calculator() {
             </Block>
           </div>
 
-          <div className="lg:col-span-4 calc-anim flex">
+          <div className="lg:col-span-5 calc-anim flex">
             <div className="w-full p-8 lg:p-10 rounded-3xl border border-gold/30 bg-gradient-to-br from-bg-card to-bg gold-glow flex flex-col">
               <div className="text-xs uppercase tracking-[0.3em] text-gold mb-8">
                 Итого
