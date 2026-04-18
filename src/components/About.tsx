@@ -110,19 +110,12 @@ export function About() {
                 className="absolute inset-0 ring-1 ring-inset ring-white/0 group-hover:ring-gold/40 transition-colors"
               />
 
-              <div className="relative z-[1] h-full flex flex-col justify-between p-6 lg:p-7">
-                <div className="flex items-center justify-between">
-                  <div className="font-display text-[11px] tabular text-gold tracking-[0.2em]">
-                    / 0{i + 1}
-                  </div>
+              <div className="relative z-[1] h-full flex flex-col justify-end p-6 lg:p-7">
+                <div className="font-display font-black text-2xl lg:text-3xl text-text leading-[1.05] tracking-[-0.02em] mb-2 balance drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]">
+                  {f.headline}
                 </div>
-                <div>
-                  <div className="font-display font-black text-2xl lg:text-3xl text-text leading-[1.05] tracking-[-0.02em] mb-2 balance drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]">
-                    {f.headline}
-                  </div>
-                  <div className="text-xs lg:text-sm text-text-muted leading-relaxed pretty">
-                    {f.sub}
-                  </div>
+                <div className="text-xs lg:text-sm text-text-muted leading-relaxed pretty">
+                  {f.sub}
                 </div>
               </div>
             </div>
