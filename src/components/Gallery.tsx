@@ -23,16 +23,28 @@ export function Gallery() {
 
   useGSAP(
     () => {
+      gsap.from(root.current!.querySelector("h2"), {
+        scrollTrigger: { trigger: root.current, start: "top 80%" },
+        y: 90,
+        rotation: -3,
+        opacity: 0,
+        transformOrigin: "left bottom",
+        duration: 1.3,
+        ease: "expo.out",
+      });
+
       gsap.from(".gal-item", {
         scrollTrigger: {
           trigger: root.current,
           start: "top 70%",
         },
-        y: 60,
+        y: 80,
+        x: (i) => (i % 2 === 0 ? -25 : 25),
+        rotation: (i) => (i % 2 === 0 ? -2 : 2),
         opacity: 0,
-        duration: 0.8,
-        stagger: 0.08,
-        ease: "power3.out",
+        duration: 1,
+        stagger: 0.09,
+        ease: "expo.out",
       });
     },
     { scope: root }
