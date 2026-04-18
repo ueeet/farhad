@@ -184,12 +184,6 @@ export function Services() {
               }`}
             >
               <div className="relative z-[2]">
-                <div className="mb-8">
-                  <span className="font-display text-xs text-text-muted">
-                    {s.no}
-                  </span>
-                </div>
-
                 <h3 className="font-display font-black text-3xl lg:text-4xl tracking-[-0.03em] balance">
                   {s.title}
                 </h3>
