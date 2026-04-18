@@ -125,15 +125,24 @@ export function About() {
               совпало с настроением вашего дня.
             </p>
 
-            <div className="flex flex-wrap gap-2 pt-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
               {facts.map((f) => (
-                <span
-                  key={f}
-                  className="about-line inline-flex items-center gap-2 px-4 py-2 rounded-full border border-line text-xs text-text-muted hover:border-gold/50 hover:text-text transition-colors"
+                <div
+                  key={f.text}
+                  className="about-line group relative flex items-start gap-4 p-5 rounded-2xl border border-line bg-bg-card/40 hover:border-gold/60 hover:bg-bg-card transition-all"
                 >
-                  <span className="w-1 h-1 rounded-full bg-gold" />
-                  {f}
-                </span>
+                  <span className="shrink-0 w-11 h-11 rounded-xl border border-gold/30 flex items-center justify-center text-gold group-hover:bg-gold/10 group-hover:border-gold/70 transition-colors">
+                    {f.icon}
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <div className="text-[10px] uppercase tracking-[0.25em] text-gold/70 mb-1.5">
+                      {f.tag}
+                    </div>
+                    <div className="text-sm lg:text-[15px] text-text leading-snug">
+                      {f.text}
+                    </div>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
