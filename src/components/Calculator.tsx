@@ -247,25 +247,25 @@ export function Calculator() {
             </Block>
           </div>
 
-          <div className="lg:col-span-4 calc-anim">
-            <div className="lg:sticky lg:top-28 p-8 rounded-3xl border border-gold/30 bg-gradient-to-br from-bg-card to-bg gold-glow">
-              <div className="text-xs uppercase tracking-[0.3em] text-gold mb-6">
+          <div className="lg:col-span-4 calc-anim flex">
+            <div className="w-full p-8 lg:p-10 rounded-3xl border border-gold/30 bg-gradient-to-br from-bg-card to-bg gold-glow flex flex-col">
+              <div className="text-xs uppercase tracking-[0.3em] text-gold mb-8">
                 Итого
               </div>
 
               <div
                 ref={totalRef}
-                className="font-display font-black text-5xl lg:text-6xl leading-none text-gradient-gold tabular"
+                className="font-display font-black text-6xl lg:text-7xl leading-none text-gradient-gold tabular"
               >
                 {formatPrice(total)} ₽
               </div>
 
-              <p className="text-xs text-text-muted mt-4 leading-relaxed">
+              <p className="text-sm text-text-muted mt-6 leading-relaxed max-w-xs">
                 Ориентировочная стоимость работы ведущего и заявленных опций.
                 Аванс — 30%.
               </p>
 
-              <div className="space-y-2 text-sm">
+              <div className="my-auto py-10 space-y-3 text-sm border-y border-line/60">
                 <Row k="Формат" v={eventType.label} />
                 <Row k="Гостей" v={String(guests)} />
                 <Row k="Город" v={city.label} />
