@@ -28,7 +28,11 @@ export function Showreel() {
       });
 
       gsap.from(".sr-anim", {
-        scrollTrigger: { trigger: root.current, start: "top 75%" },
+        scrollTrigger: {
+          trigger: root.current,
+          start: "top 75%",
+          toggleActions: "play reverse play reverse",
+        },
         y: 70,
         scale: 0.96,
         opacity: 0,
