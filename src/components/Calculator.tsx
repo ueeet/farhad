@@ -114,7 +114,11 @@ export function Calculator() {
       });
 
       gsap.from(".calc-anim", {
-        scrollTrigger: { trigger: root.current, start: "top 70%" },
+        scrollTrigger: {
+          trigger: root.current,
+          start: "top 70%",
+          toggleActions: "play reverse play reverse",
+        },
         y: 60,
         x: (i) => (i === 0 ? 0 : i === 2 ? 40 : -40),
         opacity: 0,
