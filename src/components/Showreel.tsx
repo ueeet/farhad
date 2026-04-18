@@ -105,7 +105,7 @@ export function Showreel() {
 
         <div className="sr-anim mt-8 flex flex-wrap items-center justify-between gap-4 text-xs text-text-muted uppercase tracking-[0.2em]">
           <div className="flex items-center gap-3">
-            <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-gold" />
             Открыт к новым датам на 2026
           </div>
           <a
