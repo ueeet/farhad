@@ -140,7 +140,7 @@ export function Services() {
                 {hero.title}
               </h3>
               <p className="mt-4 text-gold italic pretty">{hero.sub}</p>
-              <p className="mt-8 text-text-muted leading-relaxed max-w-lg pretty">
+              <p className="mt-8 text-text-body leading-relaxed max-w-lg pretty">
                 {hero.desc}
               </p>
 
