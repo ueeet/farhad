@@ -44,8 +44,8 @@ body {
 }
 
 ::selection {
-  background: #ffffff;
-  color: #0a0a0a;
+  background: var(--gold);
+  color: var(--bg);
 }
 
 ::-webkit-scrollbar {
@@ -58,21 +58,20 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2a2a2a;
+  background: var(--bg-card);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: var(--gold-deep);
 }
 
 .font-display {
   font-family: var(--font-unbounded), system-ui, sans-serif;
-  letter-spacing: -0.04em;
 }
 
 .text-gradient-gold {
-  background: linear-gradient(180deg, #ffffff 0%, #d6d3cb 55%, #7a7870 100%);
+  background: linear-gradient(180deg, hsl(38 80% 78%) 0%, hsl(38 58% 58%) 55%, hsl(38 42% 36%) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
